@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pitch: #0b0b0c;
+  --color-panel: #151517;
+  --color-panel2: #1b1b1e;
+  --color-line: #26262b;
+  --color-ember: #f97d1c;
+  --color-flare: #ffa24d;
+  --color-bone: #efeae0;
+  --color-smoke: #8e8e96;
+
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+}
+
+html {
+  background: var(--color-pitch);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-bone);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Titulares condensados en mayúsculas, como el rótulo de las cartas */
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+}
+
+/* Firma visual: esquinas biseladas que remiten al marco de la carta */
+.notch {
+  clip-path: polygon(
+    12px 0, calc(100% - 12px) 0, 100% 12px,
+    100% calc(100% - 12px), calc(100% - 12px) 100%,
+    12px 100%, 0 calc(100% - 12px), 0 12px
+  );
+}
+
+.notch-sm {
+  clip-path: polygon(
+    7px 0, calc(100% - 7px) 0, 100% 7px,
+    100% calc(100% - 7px), calc(100% - 7px) 100%,
+    7px 100%, 0 calc(100% - 7px), 0 7px
+  );
+}
+
+/* Fondo con brasa sutil, como la atmósfera del estadio en las cartas */
+.ember-glow {
+  background:
+    radial-gradient(60% 40% at 85% 0%, rgba(249, 125, 28, 0.10), transparent 70%),
+    radial-gradient(50% 35% at 0% 100%, rgba(249, 125, 28, 0.05), transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

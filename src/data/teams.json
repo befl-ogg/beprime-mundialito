@@ -1,0 +1,6 @@
+[
+  { "id": "equipo-a", "nombre": "Equipo A", "corto": "EQA", "color": "#F97D1C" },
+  { "id": "equipo-b", "nombre": "Equipo B", "corto": "EQB", "color": "#3B82F6" },
+  { "id": "equipo-c", "nombre": "Equipo C", "corto": "EQC", "color": "#22C55E" },
+  { "id": "equipo-d", "nombre": "Equipo D", "corto": "EQD", "color": "#EF4444" }
+]
