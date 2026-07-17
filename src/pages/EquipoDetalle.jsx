@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import SectionTitle from '../components/SectionTitle.jsx'
 import MatchRow from '../components/MatchRow.jsx'
-import { teamById, playersOfTeam, sortByPosition, allMatches } from '../lib/stats.js'
+import { teamById, playersOfTeam, sortByPosition, allMatches, standings } from '../lib/stats.js'
 
 export default function EquipoDetalle() {
   const { id } = useParams()
@@ -11,12 +11,32 @@ export default function EquipoDetalle() {
   }
   const roster = sortByPosition(playersOfTeam(id))
   const partidos = allMatches.filter((m) => m.local === id || m.visitante === id)
+  const table = standings()
+  const idx = table.findIndex((r) => r.equipo.id === id)
+  const row = table[idx]
+  const rank = idx >= 0 ? idx + 1 : null
 
   return (
-    <div className="space-y-8">
-      <header className="flex items-center gap-4">
-        <span className="h-10 w-10 rotate-45 rounded-sm" style={{ background: team.color }} aria-hidden />
-        <h1 className="display text-4xl">{team.nombre}</h1>
+    <div className="space-y-10">
+      <header className="flex flex-col items-center text-center">
+        <span className="mb-4 h-16 w-16 rotate-45 border border-line2" style={{ background: team.color }} aria-hidden />
+        <h1 className="display text-4xl italic md:text-5xl">{team.nombre}</h1>
+        {row && (
+          <dl className="notch mt-6 grid w-full max-w-md grid-cols-3 border border-line2 bg-panel2 p-4 ember-glow">
+            <div className="flex flex-col items-center">
+              <dt className="display text-[10px] tracking-widest text-smoke">Posición</dt>
+              <dd className="display text-2xl italic text-ember">{rank}º</dd>
+            </div>
+            <div className="flex flex-col items-center border-x border-line">
+              <dt className="display text-[10px] tracking-widest text-smoke">Jugados</dt>
+              <dd className="display text-2xl italic">{row.pj}</dd>
+            </div>
+            <div className="flex flex-col items-center">
+              <dt className="display text-[10px] tracking-widest text-smoke">Puntos</dt>
+              <dd className="display text-2xl italic text-flare">{row.pts}</dd>
+            </div>
+          </dl>
+        )}
       </header>
 
       <section>
@@ -30,7 +50,7 @@ export default function EquipoDetalle() {
                 className="w-full rounded-lg transition-transform group-hover:scale-[1.03]"
                 loading="lazy"
               />
-              <p className="display mt-1 text-center text-sm text-smoke group-hover:text-bone">
+              <p className="display mt-1.5 text-center text-sm tracking-wide text-smoke group-hover:text-primary">
                 {p.posicion} · {p.media}
               </p>
             </Link>

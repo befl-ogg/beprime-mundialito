@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="es" class="dark" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-fixed": "#2e1500",
+                "on-surface-variant": "#dec1b0",
+                "tertiary-fixed": "#e7e2d8",
+                "on-secondary-fixed-variant": "#6d3900",
+                "surface-dim": "#131314",
+                "on-error": "#690005",
+                "on-secondary": "#4d2700",
+                "surface-tint": "#ffb68b",
+                "primary-fixed-dim": "#ffb68b",
+                "on-background": "#e5e2e3",
+                "on-secondary-container": "#ffede1",
+                "error": "#ffb4ab",
+                "on-error-container": "#ffdad6",
+                "secondary": "#ffb77b",
+                "surface-variant": "#353436",
+                "primary-fixed": "#ffdbc8",
+                "on-tertiary-container": "#383630",
+                "surface-container-high": "#2a2a2b",
+                "on-primary-fixed-variant": "#743400",
+                "on-tertiary-fixed": "#1d1c16",
+                "on-tertiary": "#32302a",
+                "surface-container-highest": "#353436",
+                "tertiary-fixed-dim": "#cac6bd",
+                "primary-container": "#f97d1c",
+                "surface-container-low": "#1c1b1c",
+                "primary": "#ffb68b",
+                "outline-variant": "#574236",
+                "error-container": "#93000a",
+                "surface-container-lowest": "#0e0e0f",
+                "secondary-container": "#a55a00",
+                "secondary-fixed-dim": "#ffb77b",
+                "on-surface": "#e5e2e3",
+                "inverse-on-surface": "#313031",
+                "inverse-primary": "#994700",
+                "on-primary-fixed": "#321300",
+                "surface": "#131314",
+                "on-primary": "#522300",
+                "surface-container": "#201f20",
+                "on-primary-container": "#5b2800",
+                "surface-bright": "#3a393a",
+                "outline": "#a68b7d",
+                "on-tertiary-fixed-variant": "#494740",
+                "tertiary": "#cac6bd",
+                "tertiary-container": "#a39f96",
+                "secondary-fixed": "#ffdcc2",
+                "background": "#131314",
+                "inverse-surface": "#e5e2e3"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "gutter": "16px",
+                "notch-size": "8px",
+                "unit": "4px",
+                "margin-mobile": "16px",
+                "section-gap": "40px",
+                "margin-desktop": "32px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Barlow Condensed"],
+                "stat-value": ["Barlow Condensed"],
+                "headline-lg-mobile": ["Barlow Condensed"],
+                "body-md": ["Barlow"],
+                "label-caps": ["Barlow Condensed"],
+                "display-xl": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                "headline-lg": ["32px", {"lineHeight": "32px", "letterSpacing": "0.04em", "fontWeight": "800"}],
+                "stat-value": ["20px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["24px", {"lineHeight": "24px", "letterSpacing": "0.04em", "fontWeight": "800"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "display-xl": ["48px", {"lineHeight": "44px", "letterSpacing": "0.05em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="font-body-md bg-surface-container-lowest pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 border-b border-outline-variant bg-surface flex justify-between items-center h-14 px-margin-mobile"><div class="flex items-center justify-center w-full"><h1 class="font-headline-lg-mobile text-headline-lg-mobile font-black text-primary italic tracking-tighter uppercase">MUNDIALITO</h1></div></header>
+<main class="px-margin-mobile pt-6 space-y-section-gap max-w-2xl mx-auto">
+<!-- Section: Tabla de Posiciones -->
+<section>
+<div class="flex items-center gap-2 mb-4">
+<div class="w-1 h-6 bg-primary-container"></div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase italic tracking-tighter">TABLA DE POSICIONES</h2>
+</div>
+<div class="notch-container bg-surface-container ember-glow p-unit">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high">
+<th class="p-3 font-label-caps text-label-caps text-on-surface-variant uppercase">POS</th>
+<th class="p-3 font-label-caps text-label-caps text-on-surface-variant uppercase">EQUIPO</th>
+<th class="p-3 font-label-caps text-label-caps text-on-surface-variant uppercase text-center">PJ</th>
+<th class="p-3 font-label-caps text-label-caps text-on-surface-variant uppercase text-center">DIF</th>
+<th class="p-3 font-label-caps text-label-caps text-primary uppercase text-center">PTS</th>
+</tr>
+</thead>
+<tbody class="font-stat-value text-stat-value">
+<!-- Row 1 -->
+<tr class="table-row-divider hover:bg-surface-container-highest transition-colors">
+<td class="p-3 text-primary">01</td>
+<td class="p-3 flex items-center gap-3">
+<div class="w-6 h-6 bg-[#E30613] rotate-45 border border-outline-variant"></div>
+<span class="truncate">RED KINGS FC</span>
+</td>
+<td class="p-3 text-center text-on-surface-variant">12</td>
+<td class="p-3 text-center text-on-surface-variant">+24</td>
+<td class="p-3 text-center bg-primary-container/10 text-primary-container">32</td>
+</tr>
+<!-- Row 2 -->
+<tr class="table-row-divider hover:bg-surface-container-highest transition-colors">
+<td class="p-3">02</td>
+<td class="p-3 flex items-center gap-3">
+<div class="w-6 h-6 bg-[#00529B] rotate-45 border border-outline-variant"></div>
+<span class="truncate">TITANES DIGITAL</span>
+</td>
+<td class="p-3 text-center text-on-surface-variant">12</td>
+<td class="p-3 text-center text-on-surface-variant">+18</td>
+<td class="p-3 text-center bg-primary-container/10 text-primary-container">28</td>
+</tr>
+<!-- Row 3 -->
+<tr class="table-row-divider hover:bg-surface-container-highest transition-colors">
+<td class="p-3">03</td>
+<td class="p-3 flex items-center gap-3">
+<div class="w-6 h-6 bg-[#000000] rotate-45 border border-outline-variant"></div>
+<span class="truncate">BLACK PANTHERS</span>
+</td>
+<td class="p-3 text-center text-on-surface-variant">12</td>
+<td class="p-3 text-center text-on-surface-variant">+12</td>
+<td class="p-3 text-center bg-primary-container/10 text-primary-container">25</td>
+</tr>
+<!-- Row 4 -->
+<tr class="table-row-divider hover:bg-surface-container-highest transition-colors">
+<td class="p-3">04</td>
+<td class="p-3 flex items-center gap-3">
+<div class="w-6 h-6 bg-[#FFD700] rotate-45 border border-outline-variant"></div>
+<span class="truncate">GOLDEN SQUAD</span>
+</td>
+<td class="p-3 text-center text-on-surface-variant">12</td>
+<td class="p-3 text-center text-on-surface-variant">+5</td>
+<td class="p-3 text-center bg-primary-container/10 text-primary-container">21</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-highest transition-colors">
+<td class="p-3">05</td>
+<td class="p-3 flex items-center gap-3">
+<div class="w-6 h-6 bg-[#00A650] rotate-45 border border-outline-variant"></div>
+<span class="truncate">GREEN WOLVES</span>
+</td>
+<td class="p-3 text-center text-on-surface-variant">11</td>
+<td class="p-3 text-center text-on-surface-variant">-2</td>
+<td class="p-3 text-center bg-primary-container/10 text-primary-container">18</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- -->
+<section>
+<div class="flex items-center gap-2 mb-4">
+<div class="w-1 h-6 bg-primary-container"></div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase italic tracking-tighter">TABLA DE GOLEO</h2>
+</div>
+<div class="space-y-3">
+<!-- Scorer 1 -->
+<div class="notch-container bg-surface-container p-4 flex items-center justify-between border-l-4 border-primary-container ember-glow transition-transform active:scale-95 duration-200">
+<div class="flex items-center gap-4">
+<div class="font-display-xl text-display-xl text-on-surface-variant/20 italic">01</div>
+<div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile uppercase italic">SANTIAGO GIMÉNEZ</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-2 py-0.5 text-primary">DEL</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">RED KINGS FC</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-display-xl text-display-xl text-primary-container italic leading-none">14</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">GOLES</div>
+</div>
+</div>
+<!-- Scorer 2 -->
+<div class="notch-container bg-surface-container p-4 flex items-center justify-between transition-transform active:scale-95 duration-200">
+<div class="flex items-center gap-4">
+<div class="font-display-xl text-display-xl text-on-surface-variant/20 italic">02</div>
+<div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile uppercase italic text-on-surface">JULIÁN QUIÑONES</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-2 py-0.5 text-primary">DEL</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">TITANES DIGITAL</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-display-xl text-display-xl text-primary-container italic leading-none">11</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">GOLES</div>
+</div>
+</div>
+<!-- Scorer 3 -->
+<div class="notch-container bg-surface-container p-4 flex items-center justify-between transition-transform active:scale-95 duration-200">
+<div class="flex items-center gap-4">
+<div class="font-display-xl text-display-xl text-on-surface-variant/20 italic">03</div>
+<div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile uppercase italic text-on-surface">DIEGO VALDÉS</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-2 py-0.5 text-primary">MED</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">BLACK PANTHERS</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-display-xl text-display-xl text-primary-container italic leading-none">09</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">GOLES</div>
+</div>
+</div>
+<!-- Scorer 4 -->
+<div class="notch-container bg-surface-container p-4 flex items-center justify-between transition-transform active:scale-95 duration-200">
+<div class="flex items-center gap-4">
+<div class="font-display-xl text-display-xl text-on-surface-variant/20 italic">04</div>
+<div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile uppercase italic text-on-surface">HENRY MARTÍN</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-2 py-0.5 text-primary">DEL</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">GOLDEN SQUAD</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-display-xl text-display-xl text-primary-container italic leading-none">08</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">GOLES</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 border-t border-outline-variant bg-surface-container flex justify-around items-center h-16 px-4">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary font-bold hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-label-caps text-label-caps uppercase">Table</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">sports_soccer</span>
+<span class="font-label-caps text-label-caps uppercase">Matches</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-caps text-label-caps uppercase">Teams</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-label-caps uppercase">Players</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions and entry animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const rows = document.querySelectorAll('.notch-container');
+            rows.forEach((row, index) => {
+                row.style.opacity = '0';
+                row.style.transform = 'translateY(10px)';
+                setTimeout(() => {
+                    row.style.transition = 'all 0.4s ease-out';
+                    row.style.opacity = '1';
+                    row.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body></html>

@@ -4,7 +4,7 @@ import { matchesByJornada } from '../lib/stats.js'
 
 export default function Partidos() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       {matchesByJornada().map(([jornada, list]) => (
         <section key={jornada}>
           <SectionTitle>Jornada {jornada}</SectionTitle>

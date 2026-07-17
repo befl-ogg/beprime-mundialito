@@ -8,41 +8,46 @@ export default function StandingsTable({ compact = false }) {
     : ['PJ', 'PG', 'PE', 'PP', 'GF', 'GC', 'DIF', 'PTS']
 
   return (
-    <div className="notch-sm overflow-x-auto border border-line bg-panel">
+    <div className="notch-sm overflow-x-auto border border-line2 bg-panel2 ember-glow">
       <table className="w-full min-w-[320px] text-sm">
         <thead>
-          <tr className="display border-b border-line text-left text-xs tracking-widest text-smoke">
-            <th className="px-3 py-2">#</th>
-            <th className="px-3 py-2">Equipo</th>
+          <tr className="display bg-panel3 text-left text-xs tracking-widest text-smoke">
+            <th className="px-3 py-2.5">POS</th>
+            <th className="px-3 py-2.5">Equipo</th>
             {cols.map((c) => (
-              <th key={c} className={`px-2 py-2 text-center ${c === 'PTS' ? 'text-ember' : ''}`}>{c}</th>
+              <th key={c} className={`px-2 py-2.5 text-center ${c === 'PTS' ? 'text-ember' : ''}`}>{c}</th>
             ))}
           </tr>
         </thead>
-        <tbody>
+        <tbody className="display">
           {rows.map((r, i) => {
             const vals = compact
               ? [r.pj, r.dif, r.pts]
               : [r.pj, r.pg, r.pe, r.pp, r.gf, r.gc, r.dif, r.pts]
             return (
-              <tr key={r.equipo.id} className="border-b border-line/60 last:border-0">
-                <td className="display px-3 py-2 text-smoke">{i + 1}</td>
-                <td className="px-3 py-2">
-                  <Link to={`/equipos/${r.equipo.id}`} className="flex items-center gap-2 hover:text-flare">
-                    <span className="h-3 w-3 rotate-45" style={{ background: r.equipo.color }} aria-hidden />
-                    <span className="display text-base">{r.equipo.nombre}</span>
+              <tr key={r.equipo.id} className="border-b border-line/60 transition-colors last:border-0 hover:bg-panel3/60">
+                <td className={`px-3 py-2.5 text-lg tabular-nums ${i === 0 ? 'text-ember' : 'text-smoke'}`}>
+                  {String(i + 1).padStart(2, '0')}
+                </td>
+                <td className="px-3 py-2.5">
+                  <Link to={`/equipos/${r.equipo.id}`} className="flex items-center gap-2.5 hover:text-flare">
+                    <span className="h-4 w-4 shrink-0 rotate-45 border border-line2" style={{ background: r.equipo.color }} aria-hidden />
+                    <span className="truncate text-base">{r.equipo.nombre}</span>
                   </Link>
                 </td>
-                {vals.map((v, j) => (
-                  <td
-                    key={j}
-                    className={`px-2 py-2 text-center tabular-nums ${
-                      j === vals.length - 1 ? 'display text-lg text-flare' : 'text-bone'
-                    }`}
-                  >
-                    {v}
-                  </td>
-                ))}
+                {vals.map((v, j) => {
+                  const isPts = j === vals.length - 1
+                  return (
+                    <td
+                      key={j}
+                      className={`px-2 py-2.5 text-center tabular-nums ${
+                        isPts ? 'bg-ember/10 text-lg text-ember' : 'text-smoke'
+                      }`}
+                    >
+                      {v}
+                    </td>
+                  )
+                })}
               </tr>
             )
           })}

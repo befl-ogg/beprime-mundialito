@@ -13,16 +13,22 @@ export default function Jugadores() {
 
   return (
     <div>
-      <SectionTitle>Jugadores</SectionTitle>
-      <div role="tablist" aria-label="Filtrar por posición" className="mb-4 flex flex-wrap gap-2">
+      <SectionTitle>Mercado de jugadores</SectionTitle>
+      <div
+        role="tablist"
+        aria-label="Filtrar por posición"
+        className="mb-6 flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
         {POSICIONES.map((p) => (
           <button
             key={p}
             role="tab"
             aria-selected={pos === p}
             onClick={() => setPos(p)}
-            className={`display notch-sm px-3 py-1 text-sm tracking-widest transition-colors ${
-              pos === p ? 'bg-ember text-pitch' : 'bg-panel text-smoke hover:text-bone'
+            className={`display notch-sm shrink-0 whitespace-nowrap px-5 py-1.5 text-sm tracking-widest transition-transform active:scale-95 ${
+              pos === p
+                ? 'bg-ember text-pitch'
+                : 'border border-line2 bg-panel3 text-smoke hover:text-primary'
             }`}
           >
             {p}

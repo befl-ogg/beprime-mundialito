@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es-MX"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mundialito BEPRIME - Equipos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#3a393a",
+                    "on-surface-variant": "#dec1b0",
+                    "surface-container-low": "#1c1b1c",
+                    "inverse-surface": "#e5e2e3",
+                    "surface-container": "#201f20",
+                    "primary-container": "#f97d1c",
+                    "background": "#131314",
+                    "tertiary-container": "#a39f96",
+                    "surface-dim": "#131314",
+                    "on-error": "#690005",
+                    "secondary-fixed-dim": "#ffb77b",
+                    "on-tertiary-fixed-variant": "#494740",
+                    "surface-container-high": "#2a2a2b",
+                    "primary-fixed": "#ffdbc8",
+                    "on-primary-fixed-variant": "#743400",
+                    "on-error-container": "#ffdad6",
+                    "on-background": "#e5e2e3",
+                    "primary-fixed-dim": "#ffb68b",
+                    "inverse-primary": "#994700",
+                    "surface-variant": "#353436",
+                    "surface-container-highest": "#353436",
+                    "on-secondary-fixed-variant": "#6d3900",
+                    "on-primary": "#522300",
+                    "on-tertiary-fixed": "#1d1c16",
+                    "outline": "#a68b7d",
+                    "tertiary-fixed-dim": "#cac6bd",
+                    "on-surface": "#e5e2e3",
+                    "secondary-fixed": "#ffdcc2",
+                    "on-tertiary-container": "#383630",
+                    "on-tertiary": "#32302a",
+                    "secondary": "#ffb77b",
+                    "tertiary-fixed": "#e7e2d8",
+                    "surface-tint": "#ffb68b",
+                    "on-primary-fixed": "#321300",
+                    "error-container": "#93000a",
+                    "secondary-container": "#a55a00",
+                    "error": "#ffb4ab",
+                    "on-primary-container": "#5b2800",
+                    "primary": "#ffb68b",
+                    "on-secondary-container": "#ffede1",
+                    "on-secondary": "#4d2700",
+                    "surface": "#131314",
+                    "surface-container-lowest": "#0e0e0f",
+                    "outline-variant": "#574236",
+                    "on-secondary-fixed": "#2e1500",
+                    "tertiary": "#cac6bd",
+                    "inverse-on-surface": "#313031",
+                    "panel": "#151517",
+                    "panel2": "#1b1b1e",
+                    "pitch": "#0b0b0c",
+                    "ember": "#f97d1c",
+                    "line": "#26262b",
+                    "bone": "#e5e2e3",
+                    "flare": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "notch-size": "8px",
+                    "unit": "4px",
+                    "section-gap": "40px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "32px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Barlow Condensed"],
+                    "body-md": ["Barlow"],
+                    "headline-lg-mobile": ["Barlow Condensed"],
+                    "headline-lg": ["Barlow Condensed"],
+                    "stat-value": ["Barlow Condensed"],
+                    "display-xl": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "24px", "letterSpacing": "0.04em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "32px", "letterSpacing": "0.04em", "fontWeight": "800"}],
+                    "stat-value": ["20px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "display-xl": ["48px", {"lineHeight": "44px", "letterSpacing": "0.05em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131314;
+            color: #e5e2e3;
+            font-family: 'Barlow', sans-serif;
+            overflow-x: hidden;
+        }
+        .notch {
+            clip-path: polygon(
+                0 0, 
+                calc(100% - 12px) 0, 
+                100% 12px, 
+                100% 100%, 
+                12px 100%, 
+                0 calc(100% - 12px)
+            );
+        }
+        .ember-glow {
+            background: radial-gradient(circle at top right, rgba(249, 125, 28, 0.12) 0%, transparent 60%);
+        }
+        .active-nav-glow {
+            background: linear-gradient(0deg, rgba(249, 125, 28, 0.1) 0%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar Shell -->
+<header class="sticky top-0 w-full z-50 border-b border-outline-variant bg-surface flex justify-center items-center h-14 px-margin-mobile">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-black text-primary italic tracking-tighter">MUNDIALITO</h1>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto px-margin-mobile pb-24 pt-6">
+<!-- Section Header -->
+<section class="mb-8">
+<div class="flex items-center gap-3">
+<div class="w-1 h-8 bg-primary-container"></div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase">EQUIPOS DEL TORNEO</h2>
+</div>
+</section>
+<!-- Teams Vertical List -->
+<div class="space-y-6">
+<!-- RED KINGS Card -->
+<div class="notch bg-panel p-5 relative border border-line ember-glow group transition-all duration-300 hover:border-ember">
+<div class="flex justify-between items-start mb-4">
+<div class="space-y-1">
+<span class="font-label-caps text-label-caps text-ember uppercase">Posición: 1º</span>
+<h3 class="font-display-xl text-display-xl uppercase tracking-tighter leading-tight">RED KINGS</h3>
+</div>
+<div class="w-20 h-20">
+<img alt="Red Kings Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcb44eKYPe22cQQr78QIZVUfTnPJpHfocmmG-jjZ5TcNUX0JXtr8WVafQIJIhCLid-lHP9ghSXfs9apkjASRWgqCQWVZunKduMEeIV--QyypWajvOFSgSOEVn2yaXEwbWHQISwK546YOOB9Okrm0omwZxbPKq_lJIybK19fAn12wxaYumzbg7FnmmZDyTzHQ22ASqLwfs2lZvcQBL9nJ0K8K_F-N5hGisvsVMIHQUpGbYsgras4-Y0Dn1Gb19DeLSNuiUJzua-_iI"/>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-3">JUGADORES ESTRELLA</p>
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A focused professional soccer player portrait for a gaming profile, athletic build, intense expression, cinematic lighting with warm ember accents against a dark stadium background, 8k resolution high fidelity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKDyS6sihIdsu-u8mznAIBNV5D9ajjgZS6OdN1U4jXw2HC0U6Lo30kF8wLiVyPbOSUPbcngNIuAsuzBYJBO7x3DZhY-7KEiwPPofGu6HKiG35633nX99wo8BXSJA24wO9Y1aC97EVadzfFiPEjgm1wCo8ryji_V8VORA6TjITGjW9kYAniLAXLGK4FaQN21DelnbYBMc8Py0dVFG64Nrs5S9Ydr1WtVOTDfhse1EwTBUqFq6llnpaQTxqzXu151u70SyVZ-Rio67Y"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a young star soccer player in a red and black jersey, dramatic overhead lighting, sharp focus on eyes, ultra-realistic texture, dark gritty background, esport style photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADg0aSKWRV3K8lkCunQWtzg1tY-JI3bv6eCKIv_Hsl9JMhMrwF91atioMs8OL339oMNAlI4j9LoX7LwcKFdSFR1hu0BPBD2_1epZTrs_UfcIineaC5V-_NBBlx5U6oAp5aEHyPNyt9iqAQnrr6KhIs7BJFyV0viGa_b25NeYEQvHaOtQLxE4PRvy8PmwJ6OGFkW5jbpsaFe4ARkrF-khguPu0msPWacguPBYCH1nvT_XhuubHil_XzqzIBqio38VJp1g9f0Ie0L6k"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Dynamic portrait of a soccer forward player, high contrast shadow play, cinematic orange lens flare, dark environment, technical professional athlete branding style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpES7oKmYgBWfYAQdlx7C-9ftl40TFCZ028dUy224DlQ_riKZ0oHvBOVyxerwlYVQmkWu-rxry6DDXXGqtOQm4oYZMITpzgw1qOJ2wFQk39wxmsrMdZFOHoF72Gqp4FDQP5nxHdcM0tMlj-kyS2qVb1F-cw2ZZs2e-4R9KMxSdcpUBlgBzImNp2r11E96l6srvO9gDvyZJKCeFURl3AM1G-wK-zcMIi-zu37kM-TKJauqgtW0fpcbI_x02QKSvXcZAIXJ6hksotoE"/>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-stat-value text-stat-value text-flare">12</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">PLANTILLA</span>
+</div>
+</div>
+</div>
+<!-- TITANES DIGITAL Card -->
+<div class="notch bg-panel p-5 relative border border-line group transition-all duration-300 hover:border-ember">
+<div class="flex justify-between items-start mb-4">
+<div class="space-y-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Posición: 2º</span>
+<h3 class="font-display-xl text-display-xl uppercase tracking-tighter leading-tight">TITANES DIGITAL</h3>
+</div>
+<div class="w-20 h-20">
+<img alt="Titanes Digital Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDooUKt6t6WgxmSn5TnxK9kB6cPdfO_Ezv3aI8FgYPay8ykcSozVFRpOS6qNAAWijM-ckk0i9K1rC-hKqgBB7dog0zq-DQMtqK0CoHxYAx6ht3XUGncAGJ5d1tw4UwFT1ZccGUnJ-K05SMsaRy2eoSzvlq6TfcUM0ULtEMq9gmllj2r7vCZjypEI-e9HD0SqQOX6oJx_1ccXaWz6fd1xToKI1k8tnLIUXEqUXMXvn10rz1vurBm7XFi0RBWSObBeodBcREWgwc8-IA"/>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-3">JUGADORES ESTRELLA</p>
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Athletic soccer player in a blue futuristic jersey, professional profile shot, rim lighting with cool blue and silver tones, clean studio background for sports marketing, high detail skin textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWhCovxFflZBhbZ_gCkA-aFPaoAOetzMwa4X_QRhxgy_ox8U1mZc3Fj9-fbBinc9CkUJDLdq1_1q4bhaJUVIIWLVPCGkndiQuHc15ypB1OmJEW6ec1UTxrxH4oTuKbmo8_PKJjAsOVyQQhfq36T0Hz37Ewf8PB1v2MQdcP76L1svgJHkdxQpj-0quvTEMuHv_oLFpRdaQCbUI6badiIdUw4k0iPU47f1TMjlPTCqkvW4OWcTTtALJ2x8ekMIStpGp9NDs8fxaRgr4"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional athlete headshot, mid-action focused look, dramatic side lighting, silver highlights, dark minimalist background, sharp focus, gaming tournament aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFlD_Ct1uPAJ2lRTWY88n3f-zjcrHnoHAeg4O6PK8pcdJlQAkEFuuJmcH5i9Faa9ICGofC1DtLKD7v0mRSMUpRFgWs4VQfUPxeslM7r8159eEXsGvA7sTtAjzWllAqLwIvyar8psX4A0dDvpqkrnJrXj_Fu4K4uSy0fI9RTxrRCfFEQw0lEYfSEEQUxrZitkB_Q2wD9Wemq_vJN133FY8-ZiCcKFCJBvyilDhH-zzi61i4LXWcN4pI6OCns1thzyqhl2GgGIAMo58"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a soccer goalkeeper, determined expression, high-key lighting accents on a dark charcoal background, professional sports league photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMf-jl-2_IbjH0iFjy6DRi22WPUfj0tGY9ig52oYq99yNcZ8Lq2pbJJfcJ4sun-CTceR0Ynkv_ymOoj5CLjjmcM6yyCHZmjXytLkjy9VNopoNA7OZ-TaY37jAi9keuarCCCvCDP1buiwuoeBxkEHtDDYHa9n9p-rC8Ti6Ek5GP5P8xVqv7p5LA_LPA9lefTNSEi_zXiLf_cG7SnzATSvQMeNnPC02M_cNVZf-Yiwmo7ivsopIZGMvX-AvBNG6JJH-iLAlyjzdhcWA"/>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-stat-value text-stat-value text-flare">14</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">PLANTILLA</span>
+</div>
+</div>
+</div>
+<!-- BLACK PANTHERS Card -->
+<div class="notch bg-panel p-5 relative border border-line group transition-all duration-300 hover:border-ember">
+<div class="flex justify-between items-start mb-4">
+<div class="space-y-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Posición: 3º</span>
+<h3 class="font-display-xl text-display-xl uppercase tracking-tighter leading-tight">BLACK PANTHERS</h3>
+</div>
+<div class="w-20 h-20">
+<img alt="Black Panthers Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZIKdPeTZjqXIoA5qaoh7sFGam3YMwUHwydjW203gGKUOgH7O947_aAvtk8PcMwba7ao6zwNYBY7yXJ61sCCeTGcvJHm7jqi7aqx8bDTQza05sYThqllZG-2eHrleWxohHRuTcOdU__u30ox-YoakzXSJYj8n6xMAHr2dJ3FsmFdAGKP_mEph2Vr69E0nWD3Qk7FXCWmSiWQYq4iVyYGJYQsS-jgCamCl5500tuVCp4pV-QcyaDJM8V6WxwQSlOEqpkbQnHBzR-1A"/>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-3">JUGADORES ESTRELLA</p>
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a soccer player in a black and gold uniform, luxury sports aesthetic, gold rim lighting, moody dark atmosphere, high-end commercial photography, ultra-sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWyVwijOSvHrcrqDMYHmskoPzZX6LAVIPZktoDPPful44d6O_MoOihKimY86qKRp27XU_Kz5iGr9oviGarUiXWK_1F3DEPSc4CzhZPXHCfhPiRLhJ79AIazI-23s-1MnFy18qVPR0NG3PDSby2ckB9M4YI8m2ZozOrFCewmRkqwoaXz5VNPUcRlLpBvBozthxt5bvR6bTP8E1iW-wn_4gPNxbtCZyIze8ZiNEYuD6JKChpcwo6ndpIjlsF9Qc9g5KqIUNfRb7ZOoM"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Profile of a soccer captain, stoic expression, warm gold backlighting against deep black shadows, cinematic sports portraiture, premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmJwiZGm8pzlKxIbGSgymJkFlg1-nxMVy7QOnlFEzhW4UK9ZSdw-a3fkaiq6x5wJgF58O83nwap5E3A-zxFPVzskEqrsxHUflp2JZWtBYDUfaHon6_viJKkmWc81_oeQLuvMbQv_Z6IpavEd-h6fzRR9D78izUoW_2twT4QYhlj3oVJ8DxEr47szabzurs4v7H_o23Y1z1CWeTB2imrLsmZ9SxRswlT7mAsSGmyjIj8kPJxFWIS8DGNxWYrhkEZM4q1hxx8fwsD6E"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young soccer talent, intense eyes, dynamic lighting with golden sparks, dark minimalist environment, esport hero shot style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf8fQ7OwbCGIO1p8Y4L9zEnFU8pkq4oMnw7JfjYLUQIdRZT9F-SelP2tc8Hd6ybxMIgZUdCmq5_8zgbtuTaB6VoQQIRTK2fwyEJVn5kzvcNT4c1w1eDJdmNgwtK_nTr2v8dQfvMNWzS1BQn-1SQiJ3Jy6UVe_wBnnEYWWtDv9L8nKUUnyeGUifOaBk5IFuxLMkkvnaEtqpQVNEf0c8SpTQUAkPsemraJShWSYt30d1gUmk0t4NSWe6zhnP0jpJ-oEyXcz8_wyk3NE"/>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-stat-value text-stat-value text-flare">11</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">PLANTILLA</span>
+</div>
+</div>
+</div>
+<!-- GOLDEN SQUAD Card -->
+<div class="notch bg-panel p-5 relative border border-line group transition-all duration-300 hover:border-ember">
+<div class="flex justify-between items-start mb-4">
+<div class="space-y-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Posición: 4º</span>
+<h3 class="font-display-xl text-display-xl uppercase tracking-tighter leading-tight">GOLDEN SQUAD</h3>
+</div>
+<div class="w-20 h-20">
+<img alt="Golden Squad Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANVOg8_bAci_YJW4kfPtAsWQHbbAnwJ63x9C3iz-i0bJhZRvoCPA-jLbgu32ibI3I5f1_O1ZRzy7A9yxBoKYFn7F-3jVMrMxVNUUAm-a07RDEBG-EVx_oki7yQJqtI5MAt3Jlj5bYcoEUiWL4J9e0ftRJEW7G3vTWhLEn8IcQ_WFF7h2Eql7D7lwbxsICd04zCe9qjwoVm1tZbKTjOtoGu9TYHtQwSPB70mV4B-ridwxwUIGt8tpDOJeqsTJA_jORL4Ukvr4vs5Ko"/>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-3">JUGADORES ESTRELLA</p>
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Cheerful soccer player in a vibrant yellow kit, sunny studio lighting, high energy vibes, sharp commercial sports look, dark charcoal backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy3T_f8ryyGWu9XOf9mbDv0P6bwYZowP4oOvxV7IZAZxXp_DNLuY0fXtqP3lum7gBYdi1WBcptBoUzByPILhVrQZQII_nbqH1sK4QpImAld1f8IUyozIQNJo91KXJkZSltXNK-IhJZgUMABIB63oKLGI_WcIf3X31oltvKfVg2vTOe9NplEqohY1EAyF7rY6RoePy0uWbnbdk0xhoZnwIdtVu1u2bW6UZ2U4kO_Zc4BOLsZJzBqaX7y2JhVBObIPci7m1MX43egws"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Soccer midfielder portrait, golden hour lighting effect, energetic and aspirational mood, professional athlete profile, extremely high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL0U6NcbApa_0AnelyZaw-JWLFTfmOtTRoEzFIWH204mYbD_Cv4-bl9Y4jQdTGcKrswDZyYRlMATBJnxXjJ0AetaTtATEzDISXfxXrwA8sSOkJRE8tOY2qVomoS512blYYk7huMpB110PvGnl5XBJWOmRPq0pooqM3m0Nzhsvm37LvdOHfVtNTyrYGsWkLsYjhtz3EXvgvULF0T6aWtOpFkBkWb6mqqhPtPG2sn_1ey2HeJBujBR3rwcPUXEzOmszv-hPjABbjM1s"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-panel overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Headshot of a top tier soccer defender, focused gaze, volumetric lighting, yellow accents against black, premium branding aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFanQ76adcD1HjJjiQyIMYTyPrCfTGdaOYoTrH6X0ulMMb8wwGtHCKReuVk8u9w04_im8eDzDX_NzKbvhgM1pjZ_kc4tSrEo1hQClqFDxG-JTvUx_BCEDjfkIQ1uqyXTYWMnW9-PKrd0izLqIg4qM7F6Vl1QwYEg5sB3ZKKHuuT6CUF0jOLpprzUeTUpfpsgXAeJQefhpFV7LMfv1fhgHbV-WXtBvqdTB_mW2Aq3EwAuqiVuuhO5lExYeZfBNZUiUEDyhvb0TDLvo"/>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-stat-value text-stat-value text-flare">12</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">PLANTILLA</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 w-full z-50 border-t border-outline-variant bg-surface-container flex justify-around items-center h-16 w-full px-4">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-label-caps uppercase">Home</span>
+</a>
+<!-- Table -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-label-caps text-label-caps uppercase">Table</span>
+</a>
+<!-- Matches -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="sports_soccer">sports_soccer</span>
+<span class="font-label-caps text-label-caps uppercase">Matches</span>
+</a>
+<!-- Teams (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary font-bold active-nav-glow scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-label-caps text-label-caps uppercase">Teams</span>
+</a>
+<!-- Players -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-label-caps uppercase">Players</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for cards
+        document.querySelectorAll('.notch').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

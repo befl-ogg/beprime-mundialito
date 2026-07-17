@@ -1,14 +1,24 @@
 @import "tailwindcss";
 
 @theme {
+  /* Superficies (paleta Material cálida, del rediseño Stitch) */
   --color-pitch: #0b0b0c;
-  --color-panel: #151517;
-  --color-panel2: #1b1b1e;
-  --color-line: #26262b;
+  --color-surface: #131314;
+  --color-panel: #17161a;
+  --color-panel2: #201f20;
+  --color-panel3: #2a2a2b;
+  --color-panel4: #353436;
+  --color-line: #2e2823;
+  --color-line2: #574236;
+
+  /* Acentos */
   --color-ember: #f97d1c;
-  --color-flare: #ffa24d;
-  --color-bone: #efeae0;
-  --color-smoke: #8e8e96;
+  --color-flare: #ffdbc8;
+  --color-primary: #ffb68b;
+
+  /* Texto */
+  --color-bone: #e5e2e3;
+  --color-smoke: #b8a99d;
 
   --font-display: "Barlow Condensed", sans-serif;
   --font-body: "Barlow", sans-serif;
@@ -49,11 +59,24 @@ body {
   );
 }
 
+/* Corte asimétrico estilo carta FUT (esquina sup-der + inf-izq) */
+.notch-corner {
+  clip-path: polygon(
+    0 0, calc(100% - 14px) 0, 100% 14px,
+    100% 100%, 14px 100%, 0 calc(100% - 14px)
+  );
+}
+
 /* Fondo con brasa sutil, como la atmósfera del estadio en las cartas */
 .ember-glow {
   background:
     radial-gradient(60% 40% at 85% 0%, rgba(249, 125, 28, 0.10), transparent 70%),
     radial-gradient(50% 35% at 0% 100%, rgba(249, 125, 28, 0.05), transparent 70%);
+}
+
+/* Brillo de brasa localizado para cartas y tarjetas destacadas */
+.ember-glow-tr {
+  background: radial-gradient(circle at top right, rgba(249, 125, 28, 0.14) 0%, transparent 60%);
 }
 
 @media (prefers-reduced-motion: reduce) {

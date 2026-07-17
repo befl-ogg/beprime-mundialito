@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="es-MX" class="dark" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "primary-fixed-dim": "#ffb68b",
+                "on-primary": "#522300",
+                "outline-variant": "#574236",
+                "error": "#ffb4ab",
+                "on-error": "#690005",
+                "on-primary-fixed": "#321300",
+                "on-primary-container": "#5b2800",
+                "on-background": "#e5e2e3",
+                "surface-container-highest": "#353436",
+                "background": "#131314",
+                "tertiary-container": "#a39f96",
+                "secondary-fixed-dim": "#ffb77b",
+                "primary": "#ffb68b",
+                "surface": "#131314",
+                "on-surface-variant": "#dec1b0",
+                "surface-container-lowest": "#0e0e0f",
+                "tertiary-fixed": "#e7e2d8",
+                "surface-container-low": "#1c1b1c",
+                "on-secondary": "#4d2700",
+                "on-error-container": "#ffdad6",
+                "surface-container": "#201f20",
+                "secondary-container": "#a55a00",
+                "on-tertiary-fixed": "#1d1c16",
+                "inverse-surface": "#e5e2e3",
+                "outline": "#a68b7d",
+                "on-tertiary": "#32302a",
+                "secondary": "#ffb77b",
+                "surface-bright": "#3a393a",
+                "surface-dim": "#131314",
+                "on-surface": "#e5e2e3",
+                "on-secondary-fixed-variant": "#6d3900",
+                "on-secondary-fixed": "#2e1500",
+                "tertiary": "#cac6bd",
+                "secondary-fixed": "#ffdcc2",
+                "surface-tint": "#ffb68b",
+                "surface-container-high": "#2a2a2b",
+                "primary-fixed": "#ffdbc8",
+                "inverse-on-surface": "#313031",
+                "on-tertiary-fixed-variant": "#494740",
+                "on-secondary-container": "#ffede1",
+                "on-primary-fixed-variant": "#743400",
+                "inverse-primary": "#994700",
+                "error-container": "#93000a",
+                "surface-variant": "#353436",
+                "primary-container": "#f97d1c",
+                "on-tertiary-container": "#383630",
+                "tertiary-fixed-dim": "#cac6bd"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "gutter": "16px",
+                "margin-mobile": "16px",
+                "section-gap": "40px",
+                "margin-desktop": "32px",
+                "notch-size": "8px",
+                "unit": "4px"
+              },
+              "fontFamily": {
+                "label-caps": ["Barlow Condensed"],
+                "headline-lg": ["Barlow Condensed"],
+                "display-xl": ["Barlow Condensed"],
+                "body-md": ["Barlow"],
+                "stat-value": ["Barlow Condensed"],
+                "headline-lg-mobile": ["Barlow Condensed"]
+              },
+              "fontSize": {
+                "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                "headline-lg": ["32px", { "lineHeight": "32px", "letterSpacing": "0.04em", "fontWeight": "800" }],
+                "display-xl": ["48px", { "lineHeight": "44px", "letterSpacing": "0.05em", "fontWeight": "800" }],
+                "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                "stat-value": ["20px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                "headline-lg-mobile": ["24px", { "lineHeight": "24px", "letterSpacing": "0.04em", "fontWeight": "800" }]
+              }
+            },
+          },
+        }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-background text-on-background pb-20">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 border-b border-outline-variant bg-surface flex justify-between items-center h-14 px-margin-mobile w-full">
+<div class="flex items-center justify-center w-full">
+
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-black text-primary italic tracking-tighter">MUNDIALITO</h1>
+</div>
+
+</header>
+<main class="px-4 py-6">
+<!-- Section Header -->
+<div class="flex items-center gap-2 mb-6">
+<div class="w-1 h-6 bg-primary-container"></div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase italic">Mercado de Jugadores</h2>
+</div>
+<!-- Position Filter Tabs -->
+<div class="flex gap-2 overflow-x-auto hide-scrollbar mb-8 pb-2">
+<button class="notch-sm px-6 py-2 bg-primary-container text-on-primary font-label-caps text-label-caps uppercase transition-transform active:scale-95 whitespace-nowrap">TODOS</button>
+<button class="notch-sm px-6 py-2 bg-surface-container-high text-on-surface-variant border border-outline-variant font-label-caps text-label-caps uppercase transition-transform active:scale-95 whitespace-nowrap">POR</button>
+<button class="notch-sm px-6 py-2 bg-surface-container-high text-on-surface-variant border border-outline-variant font-label-caps text-label-caps uppercase transition-transform active:scale-95 whitespace-nowrap">DEF</button>
+<button class="notch-sm px-6 py-2 bg-surface-container-high text-on-surface-variant border border-outline-variant font-label-caps text-label-caps uppercase transition-transform active:scale-95 whitespace-nowrap">MED</button>
+<button class="notch-sm px-6 py-2 bg-surface-container-high text-on-surface-variant border border-outline-variant font-label-caps text-label-caps uppercase transition-transform active:scale-95 whitespace-nowrap">DEL</button>
+</div>
+<!-- Player Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Player Card 1 -->
+<div class="notch bg-surface-container relative overflow-hidden group border border-outline-variant/30 hover:border-primary-container/50 transition-colors">
+<div class="ember-glow absolute inset-0 pointer-events-none"></div>
+<div class="aspect-[3/4] relative">
+<img class="w-full h-full object-cover" data-alt="A high-fidelity studio portrait of a professional soccer player looking intense, lit with dramatic orange and blue cinematic lighting against a dark textured background, echoing a premium video game ultimate team card style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsldb57jIpxC-GH6on5Wn4Q7MejXYiI0plQmZr06GdRMAMRDoR8Z3KRQakfTLByj8BySTIdHl2Y2I08GAEkYw3DY-1gsNQWCUo5vnm22zav8JCaQpsG6Tf2JzYh-NvBw0nEzIZLSilhOI5Wcnos-nozGOD0rfgV-c_Crov980rUt2tBsAOZLBW2yr9cP-WuxaE-RJzrumHXrFh1ffnan66U1y0OqAb5EllmXpI0mhZGauReXuVtkIPYX_xuzMtME8kMQQuJMSypws">
+<div class="absolute top-2 left-2 flex flex-col items-center">
+<span class="font-display-xl text-display-xl text-primary-container leading-none">94</span>
+<span class="font-label-caps text-label-caps text-primary-container -mt-1">DEL</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-highest/80 backdrop-blur-sm border-t border-outline-variant/30">
+<p class="font-headline-lg-mobile text-[18px] uppercase italic truncate">EL FENÓMENO</p>
+<div class="flex items-center gap-1 mt-1">
+<div class="w-4 h-[2px] bg-primary-container"></div>
+<span class="text-[10px] text-on-surface-variant font-label-caps tracking-widest">BEPRIME ELITE</span>
+</div>
+</div>
+</div>
+<!-- Player Card 2 -->
+<div class="notch bg-surface-container relative overflow-hidden group border border-outline-variant/30">
+<div class="ember-glow absolute inset-0 pointer-events-none"></div>
+<div class="aspect-[3/4] relative">
+<img class="w-full h-full object-cover" data-alt="Action shot of a mid-field soccer player controlling a ball, stylized with digital sparks and light trails, dark atmospheric lighting with amber highlights, high-resolution textures suitable for an elite sports app interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxYvWRD1vS-TiNhM5GG5HwNAcuWPHIhTlpz5OMOeQQ79C7mtrZ8mMC_5Nz6ykKNJ6F3H0WfEBv6u06Y7oSd4UOTH4H_pGaA_dkYe8xcm7LTXwXwwOcZvPq9mhw29NcuJ7jDSsvrWEIhxn7Z1k7jAAflPIXnAzcbub75pOG23ymdDYVr0fA6gPZQkQ4uDk7zU50fb4saIil6rs6_uj1V80gHkk7YaUk5_GMOy5kdV7eAo83B5NlqqsqD_c_rNeNtnzfyWbAjWsPXiE">
+<div class="absolute top-2 left-2 flex flex-col items-center">
+<span class="font-display-xl text-display-xl text-primary-container leading-none">91</span>
+<span class="font-label-caps text-label-caps text-primary-container -mt-1">MED</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-highest/80 backdrop-blur-sm border-t border-outline-variant/30">
+<p class="font-headline-lg-mobile text-[18px] uppercase italic truncate">EL MAGO</p>
+<div class="flex items-center gap-1 mt-1">
+<div class="w-4 h-[2px] bg-primary-container"></div>
+<span class="text-[10px] text-on-surface-variant font-label-caps tracking-widest">REAL MADRID</span>
+</div>
+</div>
+</div>
+<!-- Player Card 3 -->
+<div class="notch bg-surface-container relative overflow-hidden group border border-outline-variant/30">
+<div class="ember-glow absolute inset-0 pointer-events-none"></div>
+<div class="aspect-[3/4] relative">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young defender soccer player in a black and orange jersey, professional sport photography with shallow depth of field, sharp focus on eyes, dark moody background with subtle lens flare." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2_blJXVg3Pj44yvVce67BvSqj4eyHrcQ4YtkQzzb--7qeNgm6RDtlw1BmQxIzqxlHJwyubSsno6jdJRWfc471vuzjZPg56ui8515g4IuvRJsgQOq4j__9xEP2aQEiw_L7UpoRam8p8X1DBboMeJXVtl1wXESyhNjfp206TfB86dlxdHZU4gwoLCPVDArJyjt1XcdeXrWP5I-e7igB_If2PZte5WunXeLKCSm3wTZx144bXpfdqlJswdsVsBxOCBBM-PDfA_WiYEc">
+<div class="absolute top-2 left-2 flex flex-col items-center">
+<span class="font-display-xl text-display-xl text-primary-container leading-none">88</span>
+<span class="font-label-caps text-label-caps text-primary-container -mt-1">DEF</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-highest/80 backdrop-blur-sm border-t border-outline-variant/30">
+<p class="font-headline-lg-mobile text-[18px] uppercase italic truncate">MURO KAI</p>
+<div class="flex items-center gap-1 mt-1">
+<div class="w-4 h-[2px] bg-primary-container"></div>
+<span class="text-[10px] text-on-surface-variant font-label-caps tracking-widest">FC BARCELONA</span>
+</div>
+</div>
+</div>
+<!-- Player Card 4 -->
+<div class="notch bg-surface-container relative overflow-hidden group border border-outline-variant/30">
+<div class="ember-glow absolute inset-0 pointer-events-none"></div>
+<div class="aspect-[3/4] relative">
+<img class="w-full h-full object-cover" data-alt="Dynamic portrait of a soccer goalkeeper jumping to make a save, captured with a fast shutter speed, dramatic shadows, neon ember accents, and a gritty dark stadium background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1EkYU6kwK4FvCfqJT4H1p0bEYIwwQvF9Rv5fi_gVD_ntAZ27bzVSyT4_Ur-mXLm0RSs_98A-zrZoOMIxW_sms_xQGuFmQJ35asKXoFCku3EGVM7TpCqElZAaagQ-jRtALzU5hQAZo3zG51xN1nJK1CdVS4ajcTHRhc8CKeGmV_tl0esP1X8Vwo0jrKP03ikwJYNRwg6g0lGHX-bnzUEpzn5qcjnMPB3kAJHupSd7Z6G_vLunHq5epgQ8K8JhZB9c2rAnRKmsMJlE">
+<div class="absolute top-2 left-2 flex flex-col items-center">
+<span class="font-display-xl text-display-xl text-primary-container leading-none">90</span>
+<span class="font-label-caps text-label-caps text-primary-container -mt-1">POR</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-highest/80 backdrop-blur-sm border-t border-outline-variant/30">
+<p class="font-headline-lg-mobile text-[18px] uppercase italic truncate">LA ARAÑA</p>
+<div class="flex items-center gap-1 mt-1">
+<div class="w-4 h-[2px] bg-primary-container"></div>
+<span class="text-[10px] text-on-surface-variant font-label-caps tracking-widest">CITY STAR</span>
+</div>
+</div>
+</div>
+<!-- Player Card 5 -->
+<div class="notch bg-surface-container relative overflow-hidden group border border-outline-variant/30">
+<div class="ember-glow absolute inset-0 pointer-events-none"></div>
+<div class="aspect-[3/4] relative">
+<img class="w-full h-full object-cover" data-alt="Close up of a soccer striker celebrating a goal, emotional expression, high contrast lighting, dark background with ember dust particles flying in the air, professional gaming aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYn-ti_4obv2qUT0I3h9bp_CII2HPoimCTis3-WQa4QJz8NQXRO6lDGFP0UHKaUcZgTH9_AbWlQiL9kMRHp8mxXpU2eDbZ3Aw3hpKBxLa2q_-J8rY6kfsFFrT98eRggMwra_WNfGWWEkAB_sdkZnGKvcJI81wGt7_hylw-MHjCwoNoyXsdCDC_wd0Va5bEHKM1hG9gJQT4Tq8po0rEl6ON-JZJcjlEzlIoKYSrNYnnsHgJhJTuHOzfFV2TOc5EPL7vZv-JwFq6DKE">
+<div class="absolute top-2 left-2 flex flex-col items-center">
+<span class="font-display-xl text-display-xl text-primary-container leading-none">92</span>
+<span class="font-label-caps text-label-caps text-primary-container -mt-1">DEL</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-highest/80 backdrop-blur-sm border-t border-outline-variant/30">
+<p class="font-headline-lg-mobile text-[18px] uppercase italic truncate">TORO ROJO</p>
+<div class="flex items-center gap-1 mt-1">
+<div class="w-4 h-[2px] bg-primary-container"></div>
+<span class="text-[10px] text-on-surface-variant font-label-caps tracking-widest">LIVERPOOL FC</span>
+</div>
+</div>
+</div>
+<!-- Player Card 6 -->
+<div class="notch bg-surface-container relative overflow-hidden group border border-outline-variant/30">
+<div class="ember-glow absolute inset-0 pointer-events-none"></div>
+<div class="aspect-[3/4] relative">
+<img class="w-full h-full object-cover" data-alt="Elegant portrait of a veteran soccer playmaker, sophisticated lighting, deep blacks and vibrant orange glow highlights, cinematic composition, elite sports lifestyle photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDV0DtjQFb0-niORCCIrC2TqpjS8wka85h_QNcJXuZoRtfpPvN9sj_9u-H2qMX30Af-LvQU65VZUa9bZoJ9X-qsvOFqSYKhAvz30xwcY7CZUvdlb8bH-osyL9xn7DRCMdebwi2GDVrXC0W0CAAnoPRib4KNNGOcVQ1bMuiX5U-FpX6Id3zM-9oVvGx2PSYaijTLbmmggrVeNao1ZWKPzey2DgQo-ChnE0pL11Wa58YaUipK1uvJPBa5uK9fgYfpgETdBIBnBWBG5M">
+<div class="absolute top-2 left-2 flex flex-col items-center">
+<span class="font-display-xl text-display-xl text-primary-container leading-none">89</span>
+<span class="font-label-caps text-label-caps text-primary-container -mt-1">MED</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-highest/80 backdrop-blur-sm border-t border-outline-variant/30">
+<p class="font-headline-lg-mobile text-[18px] uppercase italic truncate">EL CAPO</p>
+<div class="flex items-center gap-1 mt-1">
+<div class="w-4 h-[2px] bg-primary-container"></div>
+<span class="text-[10px] text-on-surface-variant font-label-caps tracking-widest">INTER MILAN</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 border-t border-outline-variant bg-surface-container flex justify-around items-center h-16 w-full px-4">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-label-caps uppercase mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-label-caps text-label-caps uppercase mt-1">Table</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="sports_soccer">sports_soccer</span>
+<span class="font-label-caps text-label-caps uppercase mt-1">Matches</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-label-caps text-label-caps uppercase mt-1">Teams</span>
+</button>
+<!-- Active Tab: Players -->
+<button class="flex flex-col items-center justify-center text-primary dark:text-primary font-bold hover:text-primary-container transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-caps text-label-caps uppercase mt-1">Players</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions for tab switching (Visual only)
+        const tabs = document.querySelectorAll('.notch-sm');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => {
+                    t.classList.remove('bg-primary-container', 'text-on-primary');
+                    t.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'border', 'border-outline-variant');
+                });
+                tab.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'border', 'border-outline-variant');
+                tab.classList.add('bg-primary-container', 'text-on-primary');
+            });
+        });
+
+        // Simple parallax effect for cards on scroll
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.notch');
+            cards.forEach((card, index) => {
+                const speed = (index % 2 === 0) ? 0.05 : 0.02;
+                const rect = card.getBoundingClientRect();
+                if(rect.top < window.innerHeight && rect.bottom > 0) {
+                    const yPos = -(window.scrollY * speed);
+                    // Subtle translation for feeling of depth
+                    card.style.transform = `translateY(${yPos % 10}px)`;
+                }
+            });
+        });
+    </script>
+</body></html>
