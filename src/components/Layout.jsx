@@ -32,7 +32,7 @@ function Tab({ to, label, icon: Icon, end }) {
 
 export default function Layout() {
   return (
-    <div className="min-h-dvh ember-glow">
+    <div className="flex min-h-dvh flex-col ember-glow">
       <header className="sticky top-0 z-20 border-b border-line2 bg-surface/90 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-5xl items-center justify-center px-4 md:justify-between">
           <NavLink to="/inicio" className="display text-2xl italic tracking-tighter text-primary">
@@ -44,10 +44,12 @@ export default function Layout() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 pb-24 pt-6 md:pb-10">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 pt-6">
         <Outlet />
+      </main>
 
-        <footer className="mt-12 border-t border-line2 pt-6 text-center">
+      <footer className="mx-auto w-full max-w-5xl px-4">
+        <div className="border-t border-line2 pt-6 pb-[calc(5.5rem+env(safe-area-inset-bottom))] text-center md:pb-8">
           <p className="text-sm text-smoke">
             Desarrollador{' '}
             <a
@@ -72,8 +74,8 @@ export default function Layout() {
           <p className="display mt-2 text-xs tracking-widest text-smoke">
             Update: Julio 2026 <span className="mx-1 text-line2">·</span> V 1.0
           </p>
-        </footer>
-      </main>
+        </div>
+      </footer>
 
       <nav
         aria-label="Principal"
