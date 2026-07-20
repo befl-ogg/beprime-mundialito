@@ -87,3 +87,72 @@ public/img/
   lo pida explícitamente.
 - Recuerda: la Jornada 1 en `matches.json` trae marcadores **de ejemplo**; no
   los tomes como datos reales.
+
+
+## Organización de equipos
+
+TeamName: Cachonditos FC 
+
+Logo: cachonditos-logo.png
+
+Equipo: 
+- atzin.jpeg
+- vazquez.jpeg
+- mane.jpeg
+- sifon.jpeg
+- jarvism.jpeg
+---
+
+TeamName: FC INN
+
+Logo: inn-logo.png
+
+Equipo:
+- rauliin.jpeg
+- toriyama.jpeg
+- ian.jpeg
+- elkaiser.jpeg
+- jorgin.jpeg
+---
+
+TeamName: Matha Gordaz
+
+Logo: matha-logo.png
+
+Equipo:
+- pepin14.jpeg
+- johan.jpeg
+- carlitos.jpeg
+- diegool.jpeg
+- ceron.jpeg
+---
+
+TeamName: Fuckboys FC 
+
+Logo: fuckboys-logo
+
+Equipo:
+- silla.jpeg
+- alejandro.jpeg
+- gutti.jpeg
+- santana.jpeg
+- quimin.jpeg
+---
+
+## FECHAS
+LA PRIMERA JORNADA ES EL JUEVES 23 DE JULIO. 
+
+PRIMER PARTIDO INICIA A LAS 7:30 ( FC INN VS DEPORTIVO MATHA G.)
+
+SEGUNDO PARTIDO INICIA 8:30 (FUCKBOYS FC VS CACHONDITOS FC).
+
+SEGUNDA JORNADA SERA EL MIERCOLES 29 DE JULIO.
+
+PRIMER PARTIDO INICIA 7:30 (FUCKBOYS VS DEPORTIVO MATHA G.)
+
+SEGUNDO PARTIDO 8:30 (FC INN VS CACHONDITOS)
+
+## LUGAR 
+Parque Deportivo 20 de Noviembre
+
+https://maps.app.goo.gl/yk7qxKQMfiBj3PoB9?g_st=ic

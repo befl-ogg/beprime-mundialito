@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import SectionTitle from '../components/SectionTitle.jsx'
 import MatchRow from '../components/MatchRow.jsx'
+import TeamCrest from '../components/TeamCrest.jsx'
 import { teamById, playersOfTeam, sortByPosition, allMatches, standings } from '../lib/stats.js'
 
 export default function EquipoDetalle() {
@@ -19,7 +20,7 @@ export default function EquipoDetalle() {
   return (
     <div className="space-y-10">
       <header className="flex flex-col items-center text-center">
-        <span className="mb-4 h-16 w-16 rotate-45 border border-line2" style={{ background: team.color }} aria-hidden />
+        <TeamCrest team={team} size={112} className="mb-4" />
         <h1 className="display text-4xl italic md:text-5xl">{team.nombre}</h1>
         {row && (
           <dl className="notch mt-6 grid w-full max-w-md grid-cols-3 border border-line2 bg-panel2 p-4 ember-glow">

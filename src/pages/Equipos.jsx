@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
+import { MapPin } from 'lucide-react'
 import SectionTitle from '../components/SectionTitle.jsx'
+import TeamCrest from '../components/TeamCrest.jsx'
 import { allTeams, playersOfTeam, standings } from '../lib/stats.js'
+import liga from '../data/liga.json'
 
 export default function Equipos() {
   const table = standings()
@@ -28,7 +31,7 @@ export default function Equipos() {
                     </span>
                   )}
                   <h3 className="display flex items-center gap-2.5 text-3xl italic leading-tight">
-                    <span className="h-5 w-5 shrink-0 rotate-45 border border-line2" style={{ background: t.color }} aria-hidden />
+                    <TeamCrest team={t} size={36} />
                     {t.nombre}
                   </h3>
                 </div>
@@ -52,6 +55,24 @@ export default function Equipos() {
           )
         })}
       </div>
+
+      <section className="mt-10">
+        <SectionTitle>Sede</SectionTitle>
+        <a
+          href={liga.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="notch flex items-center gap-4 border border-line2 bg-panel2 p-5 ember-glow transition-all hover:border-ember active:scale-[0.99]"
+        >
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ember/15 text-ember">
+            <MapPin size={24} strokeWidth={2.2} aria-hidden />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className="display text-xl italic leading-tight">{liga.sede}</p>
+            <p className="display text-xs tracking-widest text-smoke">Ver en Google Maps →</p>
+          </div>
+        </a>
+      </section>
     </div>
   )
 }

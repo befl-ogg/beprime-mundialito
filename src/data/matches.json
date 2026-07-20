@@ -1,25 +1,6 @@
 [
-  {
-    "id": "j1-p1", "jornada": 1, "fase": "regular", "fecha": "2026-07-19", "hora": "10:00",
-    "local": "equipo-a", "visitante": "equipo-b", "jugado": true,
-    "marcador": { "local": 3, "visitante": 2 },
-    "goles": [
-      { "jugador": "sifon", "cantidad": 2 },
-      { "jugador": "rauliin", "cantidad": 1 },
-      { "jugador": "quimin", "cantidad": 2 }
-    ]
-  },
-  {
-    "id": "j1-p2", "jornada": 1, "fase": "regular", "fecha": "2026-07-19", "hora": "11:00",
-    "local": "equipo-c", "visitante": "equipo-d", "jugado": true,
-    "marcador": { "local": 1, "visitante": 1 },
-    "goles": [
-      { "jugador": "gutti", "cantidad": 1 },
-      { "jugador": "jarvism", "cantidad": 1 }
-    ]
-  },
-  { "id": "j2-p1", "jornada": 2, "fase": "regular", "fecha": "2026-07-26", "hora": "10:00", "local": "equipo-a", "visitante": "equipo-c", "jugado": false, "marcador": null, "goles": [] },
-  { "id": "j2-p2", "jornada": 2, "fase": "regular", "fecha": "2026-07-26", "hora": "11:00", "local": "equipo-b", "visitante": "equipo-d", "jugado": false, "marcador": null, "goles": [] },
-  { "id": "j3-p1", "jornada": 3, "fase": "regular", "fecha": "2026-08-02", "hora": "10:00", "local": "equipo-a", "visitante": "equipo-d", "jugado": false, "marcador": null, "goles": [] },
-  { "id": "j3-p2", "jornada": 3, "fase": "regular", "fecha": "2026-08-02", "hora": "11:00", "local": "equipo-b", "visitante": "equipo-c", "jugado": false, "marcador": null, "goles": [] }
+  { "id": "j1-p1", "jornada": 1, "fase": "regular", "fecha": "2026-07-23", "hora": "19:30", "local": "fc-inn", "visitante": "matha", "jugado": false, "marcador": null, "goles": [] },
+  { "id": "j1-p2", "jornada": 1, "fase": "regular", "fecha": "2026-07-23", "hora": "20:30", "local": "fuckboys", "visitante": "cachonditos", "jugado": false, "marcador": null, "goles": [] },
+  { "id": "j2-p1", "jornada": 2, "fase": "regular", "fecha": "2026-07-29", "hora": "19:30", "local": "fuckboys", "visitante": "matha", "jugado": false, "marcador": null, "goles": [] },
+  { "id": "j2-p2", "jornada": 2, "fase": "regular", "fecha": "2026-07-29", "hora": "20:30", "local": "fc-inn", "visitante": "cachonditos", "jugado": false, "marcador": null, "goles": [] }
 ]

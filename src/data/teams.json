@@ -1,6 +1,6 @@
 [
-  { "id": "equipo-a", "nombre": "Equipo A", "corto": "EQA", "color": "#F97D1C" },
-  { "id": "equipo-b", "nombre": "Equipo B", "corto": "EQB", "color": "#3B82F6" },
-  { "id": "equipo-c", "nombre": "Equipo C", "corto": "EQC", "color": "#22C55E" },
-  { "id": "equipo-d", "nombre": "Equipo D", "corto": "EQD", "color": "#EF4444" }
+  { "id": "cachonditos", "nombre": "Cachonditos FC", "corto": "CACH", "color": "#E11D2A", "logo": "img/logos/cachonditos-logo.png" },
+  { "id": "fc-inn", "nombre": "FC Inn", "corto": "INN", "color": "#C9CDD2", "logo": "img/logos/inn-logo.png" },
+  { "id": "matha", "nombre": "Deportivo Matha Ghordaz", "corto": "DMG", "color": "#E0A81E", "logo": "img/logos/matha-logo.png" },
+  { "id": "fuckboys", "nombre": "Fuckboys FC", "corto": "FBY", "color": "#2E5CB8", "logo": "img/logos/fuckboys-logo.png" }
 ]
