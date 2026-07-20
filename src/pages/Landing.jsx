@@ -32,7 +32,7 @@ function TeamSlide({ team, containerRef }) {
       <img
         src={`img/landing/slide-${team.img}.jpg`}
         alt={`Presentación del equipo ${team.nombre}`}
-        className={`mx-auto h-auto w-auto max-h-[82dvh] max-w-[440px] rounded-lg object-contain shadow-2xl shadow-black/60 transition-all duration-700 ease-out ${
+        className={`edge-fade mx-auto h-auto w-auto max-h-[82dvh] max-w-[440px] object-contain transition-all duration-700 ease-out ${
           visible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
         loading="lazy"
@@ -62,8 +62,8 @@ export default function Landing() {
 
       {/* Hero */}
       <section className="relative flex h-dvh w-full snap-start snap-always flex-col items-center justify-center overflow-hidden bg-stadium px-6 text-center">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <img src="img/landing/hero-bg.jpg" alt="" className="h-full w-full object-cover grayscale" />
+        <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40">
+          <img src="img/landing/hero-bg.jpg" alt="" className="edge-fade h-full w-auto max-w-full object-contain grayscale" />
         </div>
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-pitch via-transparent to-pitch" />
 
