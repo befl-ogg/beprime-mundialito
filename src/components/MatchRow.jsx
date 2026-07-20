@@ -1,10 +1,10 @@
 import { teamById, playerById, formatFecha } from '../lib/stats.js'
+import TeamCrest from './TeamCrest.jsx'
 
-function Side({ team, align = 'left' }) {
+function Side({ team }) {
   return (
-    <div className={`flex min-w-0 items-center gap-2.5 ${align === 'right' ? 'flex-row-reverse text-right' : ''}`}>
-      <span className="h-3.5 w-3.5 shrink-0 rotate-45 border border-line2" style={{ background: team.color }} aria-hidden />
-      <span className="display truncate text-lg uppercase tracking-wide text-smoke">{team.nombre}</span>
+    <div className="flex min-w-0 items-center justify-center">
+      <TeamCrest team={team} size={64} />
     </div>
   )
 }
@@ -32,7 +32,7 @@ export default function MatchRow({ match, showGoles = false }) {
             <span className="mt-0.5 text-[10px] uppercase text-smoke">{formatFecha(match.fecha)} · {match.hora}</span>
           </div>
         )}
-        <Side team={visitante} align="right" />
+        <Side team={visitante} />
       </div>
       {played && (
         <p className="mt-2 text-center text-[11px] uppercase tracking-widest text-smoke">
