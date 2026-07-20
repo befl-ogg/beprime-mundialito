@@ -27,12 +27,12 @@ function TeamSlide({ team, containerRef }) {
   return (
     <section
       ref={ref}
-      className="relative flex h-dvh w-full snap-start snap-always items-center justify-center bg-black"
+      className="relative flex h-dvh w-full snap-start snap-always items-center justify-center bg-pitch px-4 py-16"
     >
       <img
         src={`img/landing/slide-${team.img}.jpg`}
         alt={`Presentación del equipo ${team.nombre}`}
-        className={`h-full w-full object-cover transition-all duration-700 ease-out ${
+        className={`mx-auto h-auto w-auto max-h-[82dvh] max-w-[440px] rounded-lg object-contain shadow-2xl shadow-black/60 transition-all duration-700 ease-out ${
           visible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
         loading="lazy"
@@ -79,26 +79,9 @@ export default function Landing() {
             </p>
           </div>
 
-          {/* Grid de equipos */}
-          <div className="mt-10 grid grid-cols-2 gap-4">
-            {TEAMS.map((t) => (
-              <div
-                key={t.img}
-                className="notch-sm h-24 w-24 overflow-hidden border border-line2"
-              >
-                <img
-                  src={`img/landing/slide-${t.img}.jpg`}
-                  alt={t.nombre}
-                  className="h-full w-full object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-
           <Link
             to="/equipos"
-            className="display mt-8 text-sm tracking-widest text-ember transition-colors hover:text-flare"
+            className="display mt-10 text-sm tracking-widest text-ember transition-colors hover:text-flare"
           >
             × Conoce a los equipos ×
           </Link>
