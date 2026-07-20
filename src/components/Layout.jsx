@@ -46,6 +46,33 @@ export default function Layout() {
 
       <main className="mx-auto max-w-5xl px-4 pb-24 pt-6 md:pb-10">
         <Outlet />
+
+        <footer className="mt-12 border-t border-line2 pt-6 text-center">
+          <p className="text-sm text-smoke">
+            Desarrollador{' '}
+            <a
+              href="https://instagram.com/lordb.acon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="display italic text-primary transition-colors hover:text-ember"
+            >
+              @lordb.acon
+            </a>
+            <span className="mx-2 text-line2">·</span>
+            Organizador{' '}
+            <a
+              href="https://instagram.com/beprime.gym"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="display italic text-primary transition-colors hover:text-ember"
+            >
+              @beprime.gym
+            </a>
+          </p>
+          <p className="display mt-2 text-xs tracking-widest text-smoke">
+            Update: Julio 2026 <span className="mx-1 text-line2">·</span> V 1.0
+          </p>
+        </footer>
       </main>
 
       <nav
