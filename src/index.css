@@ -79,6 +79,19 @@ body {
   background: radial-gradient(circle at top right, rgba(249, 125, 28, 0.14) 0%, transparent 60%);
 }
 
+/* Landing "Presentación de Equipos" — look de torneo */
+.text-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.22);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(249, 125, 28, 0.55);
+}
+
+.bg-stadium {
+  background: radial-gradient(circle at center, #17161a 0%, #0a0a0a 72%);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

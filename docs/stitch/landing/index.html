@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mundialito BEPRIME - Presentación de Equipos</title>
+<!-- Google Fonts: Barlow Condensed for the 'Ultimate Tournament' look -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ember: '#f97d1c',
+            stadium: '#0a0a0a',
+          },
+          fontFamily: {
+            barlow: ['"Barlow Condensed"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="scroll-snap-layout">
+    /* Essential for the full-screen snapping experience on mobile */
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden; /* Prevent default scroll */
+    }
+    .snap-container {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      background-color: #0a0a0a;
+    }
+    .snap-section {
+      height: 100vh;
+      width: 100%;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+<style data-purpose="visual-effects">
+    /* Text stroke and textures for the "Ultimate Tournament" feel */
+    .text-outline {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    }
+    .text-glow {
+      text-shadow: 0 0 15px rgba(249, 125, 28, 0.6);
+    }
+    .bg-stadium-gradient {
+      background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+    }
+    
+    /* Animation for the scroll indicator */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-10px);}
+      60% {transform: translateY(-5px);}
+    }
+    .animate-bounce-custom {
+      animation: bounce 2s infinite;
+    }
+
+    /* Transition effects for team images */
+    .team-img {
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    .snap-section.is-visible .team-img {
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body class="font-barlow text-white bg-stadium selection:bg-ember selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 w-full z-50 p-4 flex justify-center bg-gradient-to-b from-black/80 to-transparent">
+<h1 class="text-2xl font-black tracking-widest text-ember uppercase">MUNDIALITO</h1>
+</header>
+<!-- END: MainHeader -->
+<main class="snap-container" id="main-scroll-container">
+<!-- BEGIN: HeroSection -->
+<!-- Replicating IMAGE_6 layout -->
+<section class="snap-section bg-stadium-gradient overflow-hidden">
+<!-- Background elements for IMAGE_6 look -->
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="Background Reference" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwjOrbqYkXMsTMJUrVvh2NOeGBXVxrQi5IoUPByaXMOmls3OGS3TevUKmO89K8_hD6aqzpMAGwketi0OqDzv_xcWPVk6E7X-CLg9yquu662GpbJqVRo9hml6dPy-Qu7G-tW6UpSSjRSqD251C7mA9RbN7jm7KbCArU7oo7F0H3Gmsq-bh1Shv5W6IE-cz-QOGJ4wFFqlENYDefGT6OunpGROIrPK3GMlMM4GXa3EUzNbVOQ1xLX5NKwctnAmXYAauM8Vl2rI6iOP0"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-stadium via-transparent to-stadium z-10"></div>
+<!-- Content Container -->
+<div class="relative z-20 flex flex-col items-center text-center px-6 w-full pt-16">
+<p class="text-sm tracking-[0.3em] font-bold text-gray-400 mb-2">BE PRIME PRESENTA</p>
+<div class="mb-4">
+<h2 class="text-6xl font-black italic uppercase leading-none text-white drop-shadow-lg">
+            PRESENTACIÓN<br/>
+<span class="text-ember text-7xl block -mt-2">DE EQUIPOS</span>
+</h2>
+</div>
+<div class="bg-white/10 backdrop-blur-md px-6 py-1 border-x-2 border-ember mt-2">
+<p class="text-xl font-bold tracking-widest italic">MUNDIALITO <span class="text-ember">BEPRIME</span></p>
+</div>
+<!-- Team Icons Grid (Simplified representation of the central logo cluster) -->
+<div class="grid grid-cols-2 gap-8 mt-12 mb-8 items-center justify-items-center opacity-90">
+<div class="w-20 h-20 bg-center bg-contain bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSuO9sNLbzWYbEvzy44Ga8E_hg8_TTmfUNhk3wN_hHcJ6KKYsKnCtwsBl5qkKXd73jZBwLXrnm0iW445BleBRlkQgIYTDseg6JqeAy7DJQsKFIC0h-WlTjhoi4qAentaCtrj54wNpES6i_uZZOOJTecp7nLHoBurYBZ80xW1VkqRNkPkkoC_UMWiuyUA8pUjDkXXsNDwS-n_twNfYtgVX0pBajaOERWQomnKWoTxScoC-vtgqbNJMhOOn9xZKTwSrUm96SC3PV21g');"></div>
+<div class="w-20 h-20 bg-center bg-contain bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpq6DnPb-oXQK5YYQIHEklme71-I-Vr4AqJ7e1_v5xAt9qp1DXWYsMBPuyRhlpDDsRM59sXGl-wNXcwGhRrs04oQHZjxpFXMhg1ivqCjp2U7dTpreaGxirjMDTJcALO6CXwUum92aN4qeNbbzNapXytkcX0JtpomZEyZRLTEDg8THOOxCFYX7cedpxDl4BuSycwE5vY53609rE17wDqrYmkRjhRTkqz7mKGqHXFaM9t8m717X0v-DfhqEYKDeC4Ig14AZ74ptSdjs');"></div>
+<div class="w-20 h-20 bg-center bg-contain bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOEUyv4Pu-qa1A9TxRUyGINSUxNcmWPpg9Xf8xSsUdKlv0BTTYqqcPQnLZNf7TFVIwTzFLa3PvGpz4G5lxKNj03AyiYjw0jjW6LsUbABCKrYAZv0nzamLdw94YTdSuyye9Mj7x7MCcjajMZuHb-Lk9ju9f0iIDIsMgbLur4_dxfIl9TCenKZwcfAHR0SG1myu5dBXdShXuhGJ3y0K95Nt7n3eB1MVoyun_jV2JJWWxCmx3J1d-n5ksjU7KK3674OEo2VRZ-PMfGdg');"></div>
+<div class="w-20 h-20 bg-center bg-contain bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGUs9J_YvPcuq7Y_7g8zO-8NQTCYguXJG61TuZWNh7wa08BijRqZ_n72HftwSXYX5AJhhCdvzO05YwQBxtfYnKmpteg32kWCBGQljaBWjcmQChGEoFgNqJ5sK2wqWzVs_yliNX3nxnI2oPeF7eKZqZUbpKDDamzaIs7A-eZA9fwJnFg8Xn3ZQOFvOgx_SNu7-BjOgOiokFc4VAtbx1dw3r1V9PCXqn-BOLFcwPQmXuzleQLeHiDI90yN_3a7SRJcthefyZs0-wafg');"></div>
+</div>
+<p class="text-ember font-bold text-sm tracking-widest uppercase mb-12">× CONOCE A LOS EQUIPOS ×</p>
+</div>
+<!-- Footer Text for Hero -->
+<div class="absolute bottom-12 left-0 w-full z-20 flex flex-col items-center">
+<p class="text-[10px] tracking-[0.4em] font-bold text-gray-400 uppercase mb-8">
+          FUERZA • DISCIPLINA • COMUNIDAD • PASIÓN
+        </p>
+<!-- Scroll Indicator -->
+<div class="animate-bounce-custom">
+<svg class="w-6 h-6 text-ember" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: TeamPresentations -->
+<!-- Section: Deportivo Matha Ghordaz -->
+<section class="snap-section bg-black" data-purpose="team-slide">
+<img alt="Deportivo Matha Ghordaz" class="team-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPu0JJTfMDinM5CuLDyJKQpNlqOKDapj5Kl0ieMc5Q02yVWMTZeYPsbVhJMW8YD1uOy3qa6R_kEYqhom0BTTlsW8vxxYbTkcSRLASr4tRhT50iVUYDpE7a2QG3V7oKaYfoGjQsSc4dJM5JaJ2cRNDHS2aPABlpEHie7IQvpnWtTBlzl9ztOiOZjlSsOle3d7gRXKMgP3rw_W_jFi3iMyAUkM5XMCu6k0Rp5zXzrZMf0YfEemeYVz6SLimRleX3-2iMD3avk87lxjY"/>
+</section>
+<!-- Section: Cachonditos FC -->
+<section class="snap-section bg-black" data-purpose="team-slide">
+<img alt="Cachonditos FC" class="team-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqo-bn77iLTlm1D5q9k5iqmO4F_XQ79TpMwlCKVkmNwHMYVewZXKjwFwWExTyLFRpk7UgdYOPG2ze1r2SBmRezNnrOno58eRg9-PSY1Iis0nn7_XegQ3QH9dYZMGQUj2ex3cJ2BL9vqLrs7VQhMs1KZ_lsP--i1Ujigb-KSQxM6yghJICOKbbD5I8snIniAFi7pp-s-ioytiVN7zCSxZmGdEFk31Ib__wTHViAO91eCukiCaXquQZfRdYjlwWounEdWIxszcokkKI"/>
+</section>
+<!-- Section: FC Inn -->
+<section class="snap-section bg-black" data-purpose="team-slide">
+<img alt="FC Inn" class="team-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF0lDubglufFEbuFsQKyAHn3rfkozO5HSD5yRBbUT1sSGS-tpQclVFCaQL89c_sWVuKapUvf0dF-DmI_haOJttbG47OZuiTFP1tjhmOTDIxhFg0LOZqvCmQAmqO0LffKdp1rttOoWvfkoqXvPB0wUg9BOu-ZhGMgy_jdy3FLZMQl8oY644pMa8fbMxF9sq6qfwas7n3f7b6f_vcH628mMct2Ofw_Oi_V8jtJONRHiyq-bmPGoHXXrtXlsS6n0PL7oPeRl4LZ3U1_k"/>
+</section>
+<!-- Section: Fuckboys FC -->
+<section class="snap-section bg-black" data-purpose="team-slide">
+<img alt="Fuckboys FC" class="team-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQskAKLXd8ch6nzOtFP7Fjy5z70r9AzFOt2mKYLDfWfD6IJxW5UcZdGKJNMaYW3wymyMnY3zbUfZ5TdHAgFhXtiYBbJeD3PHCTlVUl6Ff0VsFBgF1-_2jlvbguuXfAxOpiIfcSID73S4vMQFakZCkTUzjB2BUVmM7kiLslsUaICUR0W9kbu9oWuBwNZYCUHJYSZVoFOQ-BdaxHznKQgRCcQKC5k-c3UAOOiVf_MukfuFWsuGzm6aWhvKrJWlapnR1ZNkTgdf5RWAs"/>
+</section>
+<!-- END: TeamPresentations -->
+</main>
+<!-- BEGIN: InteractivityScript -->
+<script data-purpose="scroll-animations">
+    // Intersection Observer to trigger fade-in animations on scroll
+    const observerOptions = {
+      root: document.getElementById('main-scroll-container'),
+      threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        } else {
+          // Optional: remove to keep them visible once revealed
+          // entry.target.classList.remove('is-visible'); 
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.snap-section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+<!-- END: InteractivityScript -->
+</body></html>

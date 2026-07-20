@@ -2,7 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 import { Home, BarChart3, Trophy, Shield, Users } from 'lucide-react'
 
 const tabs = [
-  { to: '/', label: 'Inicio', icon: Home, end: true },
+  { to: '/inicio', label: 'Inicio', icon: Home, end: true },
   { to: '/tabla', label: 'Tabla', icon: BarChart3 },
   { to: '/partidos', label: 'Partidos', icon: Trophy },
   { to: '/equipos', label: 'Equipos', icon: Shield },
@@ -35,7 +35,7 @@ export default function Layout() {
     <div className="min-h-dvh ember-glow">
       <header className="sticky top-0 z-20 border-b border-line2 bg-surface/90 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-5xl items-center justify-center px-4 md:justify-between">
-          <NavLink to="/" className="display text-2xl italic tracking-tighter text-primary">
+          <NavLink to="/inicio" className="display text-2xl italic tracking-tighter text-primary">
             Mundialito<span className="text-flare"> BEPRIME</span>
           </NavLink>
           <nav className="hidden md:flex items-center gap-1" aria-label="Principal">

@@ -222,7 +222,8 @@ Los 7 screens generados en Google Stitch viven en `docs/stitch/<screen>/`
 
 | Screen | Carpeta | Ruta app |
 |---|---|---|
-| Inicio | `docs/stitch/inicio/` | `/` |
+| Landing (Presentación de Equipos) | `docs/stitch/landing/` | `/` |
+| Inicio | `docs/stitch/inicio/` | `/inicio` |
 | Tabla + Goleo | `docs/stitch/tabla/` | `/tabla` |
 | Partidos | `docs/stitch/partidos/` | `/partidos` |
 | Equipos | `docs/stitch/equipos/` | `/equipos` |

@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
+import Landing from './pages/Landing.jsx'
 import Home from './pages/Home.jsx'
 import Tabla from './pages/Tabla.jsx'
 import Partidos from './pages/Partidos.jsx'
@@ -11,8 +12,9 @@ import JugadorDetalle from './pages/JugadorDetalle.jsx'
 export default function App() {
   return (
     <Routes>
+      <Route path="/" element={<Landing />} />
       <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/inicio" element={<Home />} />
         <Route path="/tabla" element={<Tabla />} />
         <Route path="/partidos" element={<Partidos />} />
         <Route path="/equipos" element={<Equipos />} />
