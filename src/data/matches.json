@@ -1,6 +1,6 @@
 [
-  { "id": "j1-p1", "jornada": 1, "fase": "regular", "fecha": "2026-07-23", "hora": "19:30", "local": "fc-inn", "visitante": "matha", "jugado": false, "marcador": null, "goles": [] },
-  { "id": "j1-p2", "jornada": 1, "fase": "regular", "fecha": "2026-07-23", "hora": "20:30", "local": "fuckboys", "visitante": "cachonditos", "jugado": false, "marcador": null, "goles": [] },
+  { "id": "j1-p1", "jornada": 1, "fase": "regular", "fecha": "2026-07-23", "hora": "20:00", "local": "fc-inn", "visitante": "matha", "jugado": false, "marcador": null, "goles": [] },
+  { "id": "j1-p2", "jornada": 1, "fase": "regular", "fecha": "2026-07-23", "hora": "21:00", "local": "fuckboys", "visitante": "cachonditos", "jugado": false, "marcador": null, "goles": [] },
   { "id": "j2-p1", "jornada": 2, "fase": "regular", "fecha": "2026-07-29", "hora": "19:30", "local": "fuckboys", "visitante": "matha", "jugado": false, "marcador": null, "goles": [] },
   { "id": "j2-p2", "jornada": 2, "fase": "regular", "fecha": "2026-07-29", "hora": "20:30", "local": "fc-inn", "visitante": "cachonditos", "jugado": false, "marcador": null, "goles": [] }
 ]
