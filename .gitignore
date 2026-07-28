@@ -2,3 +2,23 @@ node_modules
 dist
 .DS_Store
 *.local
+
+# --- Framework AIDAS (no versionar en este repo) ---
+# Archivos sueltos de autoría del framework en la raíz
+/AIDAS.md
+/CHANGELOG.md
+/aidas-install-SKILL.md
+# Maquinaria del framework en el proyecto
+.claude/
+.agent-skills/
+# Constitución generada por AIDAS
+/AGENTS.md
+# Documentación generada por AIDAS dentro de docs/
+# (se conservan docs/UI-UX-BRIEF.md y docs/stitch/, que no son AIDAS)
+docs/AIDAS.md
+docs/inception/
+docs/discovery/
+docs/architecture/
+docs/specs/
+docs/shipment/
+docs/sessions/

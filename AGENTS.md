@@ -1,4 +1,24 @@
-# AGENTS.md
+---
+proyecto: "Mundialito BEPRIME"
+framework: AIDAS
+version: "0.3"
+tipo: fullstack
+modo: documentacion-retroactiva
+stack: "React 18 + React Router 6 (HashRouter) + Vite 5 + Tailwind CSS 4, JS ESM, sin backend"
+fase-actual: discovery
+ultimo-session-log: "2026-07-25-gitignore-aidas"
+tags: [aidas, agents]
+---
+
+# AGENTS.md — Mundialito BEPRIME
+
+> Constitución del proyecto. Lo primero que se lee en cada sesión.
+> Al iniciar: leer este archivo + el último session log en `docs/sessions/`.
+>
+> Este proyecto fue documentado retroactivamente con AIDAS (modo Arqueología):
+> `docs/` se generó a partir del código existente. Los artefactos marcados como
+> `draft`/`[pendiente]` requieren validación humana antes de usarse como fuente
+> de verdad.
 
 Guía para agentes de IA que trabajan en **Mundialito BEPRIME**.
 
@@ -38,13 +58,14 @@ src/
   main.jsx              # monta la app dentro de <HashRouter>
   App.jsx               # definición de rutas
   index.css             # @theme de Tailwind + clases utilitarias (.display, .notch)
-  components/           # Layout, MatchRow, SectionTitle, StandingsTable
+  components/           # Layout, MatchRow, ScorerRow, SectionTitle, StandingsTable, TeamCrest
   lib/stats.js          # TODA la lógica derivada (standings, scorers, helpers)
-  data/*.json           # fuente de verdad: matches, teams, players
+  data/*.json           # fuente de verdad: matches, teams, players, liga
   pages/                # una página por ruta
 public/img/
   cards/{id}.jpeg       # carta tamaño completo (detalle)
   thumbs/{id}.jpeg      # miniatura (grids y listas)
+  logos/                # logos de equipos
 ```
 
 ## Reglas clave del dominio
@@ -59,6 +80,7 @@ public/img/
 - **Puntos:** victoria 3, empate 1, derrota 0. Desempate: pts → diferencia de
   gol → goles a favor.
 - **Fases:** `matches.json` soporta `fase: "regular" | "semifinal" | "final"`.
+  Hoy solo hay datos de la fase `regular`.
 
 ## Relaciones entre datos (mantener consistentes)
 
@@ -74,8 +96,9 @@ public/img/
 
 - Componentes funcionales con `export default`; extensión `.jsx`.
 - Estilos con clases utilitarias de Tailwind. Usa los **tokens de color del
-  tema** (`ember`, `flare`, `bone`, `smoke`, `pitch`, `panel`, `line`) en vez de
-  colores arbitrarios; están definidos en `src/index.css` bajo `@theme`.
+  tema** (`ember`, `flare`, `bone`, `smoke`, `pitch`, `panel`, `line`,
+  `primary`) en vez de colores arbitrarios; están definidos en `src/index.css`
+  bajo `@theme`.
 - Tipografía: clase `.display` para titulares (Barlow Condensed, mayúsculas).
 - La lógica derivada de datos vive en `lib/stats.js`, no en los componentes.
 - Español para UI y comentarios, siguiendo el código existente.
@@ -83,76 +106,60 @@ public/img/
 ## Al terminar un cambio
 
 - Corre `npm run build` para verificar que compila (no hay CI ni tests).
-- **No es un repositorio git** — no ejecutes comandos git salvo que el usuario
-  lo pida explícitamente.
-- Recuerda: la Jornada 1 en `matches.json` trae marcadores **de ejemplo**; no
-  los tomes como datos reales.
+- Este proyecto **sí** es un repositorio git; realiza commits solo cuando el
+  usuario lo pida explícitamente.
 
-
-## Organización de equipos
-
-TeamName: Cachonditos FC 
-
-Logo: cachonditos-logo.png
-
-Equipo: 
-- atzin.jpeg
-- vazquez.jpeg
-- mane.jpeg
-- sifon.jpeg
-- jarvism.jpeg
 ---
 
-TeamName: FC INN
+## Framework AIDAS
 
-Logo: inn-logo.png
+AIDAS v0.3 — referencia completa: [[docs/AIDAS]]
 
-Equipo:
-- rauliin.jpeg
-- toriyama.jpeg
-- ian.jpeg
-- elkaiser.jpeg
-- jorgin.jpeg
----
+## Documentación (docs/)
 
-TeamName: Matha Gordaz
+- `docs/sessions/` — continuidad entre sesiones
+- `docs/inception/` — project-brief, scope (aprobado), stakeholders, assumptions
+- `docs/discovery/` — personas, stories (implementadas + backlog), RFs, RNF
+- `docs/architecture/` — tech-stack, system-diagram, data-model, ADRs
+- `docs/specs/` — specs SDD por feature (pendiente; usar `/new-spec`)
+- `docs/shipment/` — checklist, runbook, monitor (pendiente)
+- `docs/UI-UX-BRIEF.md` y `docs/stitch/` — material de diseño previo (preexistente)
 
-Logo: matha-logo.png
+## Skills disponibles
 
-Equipo:
-- pepin14.jpeg
-- johan.jpeg
-- carlitos.jpeg
-- diegool.jpeg
-- ceron.jpeg
----
+Los skills viven en `.agent-skills/` (fuente de verdad). Claude Code los
+descubre vía symlink en `.claude/skills/`. Invocar con `/nombre`:
+`/inception`, `/new-story`, `/new-spec`, `/review-spec`, `/gen-tasks`, `/close-session`.
 
-TeamName: Fuckboys FC 
+## Reglas AIDAS
 
-Logo: fuckboys-logo
+1. Leer el último session log al iniciar cada sesión.
+2. No implementar sin spec aprobada en `docs/specs/`.
+3. Orden de construcción: datos (JSON) → lógica derivada (`lib/stats.js`) → UI → verificación.
+4. Decisiones importantes → ADR en `docs/architecture/adr/`.
+5. Cerrar con el skill `close-session` antes de parar.
+6. Nada se asume — si no está en la spec o el dato, preguntar.
 
-Equipo:
-- silla.jpeg
-- alejandro.jpeg
-- gutti.jpeg
-- santana.jpeg
-- quimin.jpeg
----
+## Estado de la documentación retroactiva
 
-## FECHAS
-LA PRIMERA JORNADA ES EL JUEVES 23 DE JULIO. 
+- `docs/inception/`    → completo (draft; scope aprobado)
+- `docs/discovery/`    → completo (draft — validar personas y stories)
+- `docs/architecture/` → completo (draft — ADRs retroactivos)
+- `docs/specs/`        → pendiente (construir por feature con `/new-spec`)
+- `docs/shipment/`     → pendiente
 
-PRIMER PARTIDO INICIA A LAS 7:30 ( FC INN VS DEPORTIVO MATHA G.)
+## Estado actual
 
-SEGUNDO PARTIDO INICIA 8:30 (FUCKBOYS FC VS CACHONDITOS FC).
+- **Fase:** Discovery (documentación retroactiva)
+- **Último session log:** [[docs/sessions/2026-07-25-gitignore-aidas]]
+- **Próximo paso:** validar documentación `draft`/`[pendiente]`; decidir npm vs pnpm
+- **Preguntas abiertas:** métricas de éxito, npm vs pnpm, hosting, semifinal/final
+- **Nota git:** AIDAS (AGENTS.md, docs AIDAS, `.agent-skills/`, `.claude/`) está
+  gitignored — fuente de verdad **local**, no versionada. Cambios sin commitear.
 
-SEGUNDA JORNADA SERA EL MIERCOLES 29 DE JULIO.
+## Links
 
-PRIMER PARTIDO INICIA 7:30 (FUCKBOYS VS DEPORTIVO MATHA G.)
-
-SEGUNDO PARTIDO 8:30 (FC INN VS CACHONDITOS)
-
-## LUGAR 
-Parque Deportivo 20 de Noviembre
-
-https://maps.app.goo.gl/yk7qxKQMfiBj3PoB9?g_st=ic
+- [[docs/sessions/_index]]
+- [[docs/inception/project-brief]]
+- [[docs/discovery/stories/_index]]
+- [[docs/AIDAS]]
