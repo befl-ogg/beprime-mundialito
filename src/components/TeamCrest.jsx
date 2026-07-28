@@ -8,6 +8,16 @@ export default function TeamCrest({ team, size = 40, className = '' }) {
   const [failed, setFailed] = useState(false)
   const px = `${size}px`
 
+  if (!team) {
+    return (
+      <span
+        style={{ width: size * 0.55, height: size * 0.55 }}
+        className={`shrink-0 rotate-45 border border-line2 bg-panel4 ${className}`}
+        aria-hidden
+      />
+    )
+  }
+
   if (team.logo && !failed) {
     return (
       <img
