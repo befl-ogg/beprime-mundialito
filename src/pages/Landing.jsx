@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ChevronDown } from 'lucide-react'
 import { teamById, playerById, upcomingMatches } from '../lib/stats.js'
 import MatchRow from '../components/MatchRow.jsx'
 
@@ -10,7 +11,16 @@ const TEAM_STARS = [
   { teamId: 'fuckboys', playerId: 'quimin', foto: 'kim-fuckboys.jpeg' },
 ]
 
-function TeamSlide({ star, containerRef }) {
+function ScrollHint() {
+  return (
+    <div className="pointer-events-none absolute inset-x-0 bottom-8 z-20 flex flex-col items-center gap-2">
+      <p className="display text-[10px] tracking-[0.3em] text-smoke">Desliza para ver a los equipos</p>
+      <ChevronDown className="animate-bounce text-ember" size={22} aria-hidden />
+    </div>
+  )
+}
+
+function TeamSlide({ star, containerRef, showHint = false }) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
   const team = teamById(star.teamId)
@@ -63,6 +73,8 @@ function TeamSlide({ star, containerRef }) {
           Conoce al equipo →
         </Link>
       </div>
+
+      {showHint && <ScrollHint />}
     </section>
   )
 }
@@ -103,12 +115,19 @@ export default function Landing() {
           >
             Ver calendario completo →
           </Link>
+
+          <ScrollHint />
         </section>
       )}
 
       {/* Slides de equipos */}
-      {TEAM_STARS.map((star) => (
-        <TeamSlide key={star.teamId} star={star} containerRef={containerRef} />
+      {TEAM_STARS.map((star, i) => (
+        <TeamSlide
+          key={star.teamId}
+          star={star}
+          containerRef={containerRef}
+          showHint={!proximo && i === 0}
+        />
       ))}
 
       {/* Outro / CTA */}
