@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronDown } from 'lucide-react'
 import { teamById, playerById, upcomingMatches } from '../lib/stats.js'
 import MatchRow from '../components/MatchRow.jsx'
 
 const TEAM_STARS = [
+  { teamId: 'fc-inn', playerId: 'rauliin', foto: 'raulinn-fcinn.jpeg' },
   { teamId: 'matha', playerId: 'pepin14', foto: 'pepin-matha.jpeg' },
   { teamId: 'cachonditos', playerId: 'sifon', foto: 'saif-cachondito.jpeg' },
-  { teamId: 'fc-inn', playerId: 'rauliin', foto: 'raulinn-fcinn.jpeg' },
   { teamId: 'fuckboys', playerId: 'quimin', foto: 'kim-fuckboys.jpeg' },
 ]
 
@@ -88,47 +87,6 @@ export default function Landing() {
         </Link>
       </header>
 
-      {/* Hero */}
-      <section className="relative flex h-dvh w-full snap-start snap-always flex-col items-center justify-center overflow-hidden bg-stadium px-6 text-center">
-        <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40">
-          <img src="img/landing/hero-bg.jpg" alt="" className="edge-fade h-full w-auto max-w-full object-contain grayscale" />
-        </div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-pitch via-transparent to-pitch" />
-
-        <div className="relative z-20 flex w-full flex-col items-center pt-12">
-          <p className="mb-3 text-xs font-bold tracking-[0.3em] text-smoke">BE PRIME PRESENTA</p>
-          <h1 className="display text-5xl italic leading-none text-glow sm:text-6xl">
-            Presentación
-            <span className="mt-1 block text-6xl text-ember sm:text-7xl">de Equipos</span>
-          </h1>
-          <div className="mt-5 border-x-2 border-ember bg-white/10 px-6 py-1 backdrop-blur-md">
-            <p className="display text-lg italic tracking-widest">
-              Mundialito <span className="text-ember">BEPRIME</span>
-            </p>
-          </div>
-
-          <Link
-            to="/equipos"
-            className="display mt-10 text-sm tracking-widest text-ember transition-colors hover:text-flare"
-          >
-            × Conoce a los equipos ×
-          </Link>
-        </div>
-
-        {/* Pie del hero */}
-        <div className="absolute inset-x-0 bottom-10 z-20 flex flex-col items-center">
-          <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.35em] text-smoke">
-            Fuerza • Disciplina • Comunidad • Pasión
-          </p>
-          <ChevronDown className="animate-bounce text-ember" size={24} aria-hidden />
-        </div>
-      </section>
-
-      {/* Slides de equipos */}
-      {TEAM_STARS.map((star) => (
-        <TeamSlide key={star.teamId} star={star} containerRef={containerRef} />
-      ))}
-
       {/* Próximo partido */}
       {proximo && (
         <section className="relative flex h-dvh w-full snap-start snap-always flex-col items-center justify-center gap-6 bg-stadium px-6 text-center">
@@ -147,6 +105,11 @@ export default function Landing() {
           </Link>
         </section>
       )}
+
+      {/* Slides de equipos */}
+      {TEAM_STARS.map((star) => (
+        <TeamSlide key={star.teamId} star={star} containerRef={containerRef} />
+      ))}
 
       {/* Outro / CTA */}
       <section className="relative flex h-dvh w-full snap-start snap-always flex-col items-center justify-center bg-stadium px-6 text-center">
