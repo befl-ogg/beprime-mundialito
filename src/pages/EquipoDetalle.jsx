@@ -59,6 +59,26 @@ export default function EquipoDetalle() {
         </div>
       </section>
 
+      {team.staff?.length > 0 && (
+        <section>
+          <SectionTitle>Cuerpo directivo</SectionTitle>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
+            {team.staff.map((s) => (
+              <div key={s.id}>
+                <img
+                  src={`img/thumbs/${s.id}.jpeg`}
+                  alt={`Carta de ${s.nombre}`}
+                  className="w-full rounded-lg"
+                  loading="lazy"
+                />
+                <p className="display mt-1.5 text-center text-sm tracking-wide text-smoke">{s.nombre}</p>
+                <p className="display text-center text-xs tracking-widest text-primary">{s.rol}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section>
         <SectionTitle>Partidos</SectionTitle>
         <div className="space-y-3">

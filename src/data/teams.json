@@ -1,5 +1,10 @@
 [
-  { "id": "cachonditos", "nombre": "Cachonditos FC", "corto": "CACH", "color": "#E11D2A", "logo": "img/logos/cachonditos-logo.png" },
+  { "id": "cachonditos", "nombre": "Cachonditos FC", "corto": "CACH", "color": "#E11D2A", "logo": "img/logos/cachonditos-logo.png",
+    "staff": [
+      { "id": "fer-bd", "nombre": "Fernando Vergara", "rol": "Dueño" },
+      { "id": "amed-dt", "nombre": "Amisamed Abarca", "rol": "DT" }
+    ]
+  },
   { "id": "fc-inn", "nombre": "FC Inn", "corto": "INN", "color": "#C9CDD2", "logo": "img/logos/inn-logo.png" },
   { "id": "matha", "nombre": "Deportivo Matha Ghordaz", "corto": "DMG", "color": "#E0A81E", "logo": "img/logos/matha-logo.png" },
   { "id": "fuckboys", "nombre": "Fuckboys FC", "corto": "FBY", "color": "#2E5CB8", "logo": "img/logos/fuckboys-logo.png" }
