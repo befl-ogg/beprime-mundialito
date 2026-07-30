@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import SectionTitle from '../components/SectionTitle.jsx'
 import MatchRow from '../components/MatchRow.jsx'
 import TeamCrest from '../components/TeamCrest.jsx'
+import PlayerImage from '../components/PlayerImage.jsx'
 import { teamById, playersOfTeam, sortByPosition, allMatches, standings } from '../lib/stats.js'
 
 export default function EquipoDetalle() {
@@ -45,11 +46,11 @@ export default function EquipoDetalle() {
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
           {roster.map((p) => (
             <Link key={p.id} to={`/jugadores/${p.id}`} className="group">
-              <img
-                src={`img/thumbs/${p.id}.jpeg`}
+              <PlayerImage
+                id={p.id}
+                equipoId={p.equipo}
                 alt={`Carta de ${p.apodo}`}
-                className="w-full rounded-lg transition-transform group-hover:scale-[1.03]"
-                loading="lazy"
+                className="aspect-[4/5] w-full rounded-lg object-cover transition-transform group-hover:scale-[1.03]"
               />
               <p className="display mt-1.5 text-center text-sm tracking-wide text-smoke group-hover:text-primary">
                 {p.posicion} · {p.media}
@@ -65,11 +66,11 @@ export default function EquipoDetalle() {
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
             {team.staff.map((s) => (
               <div key={s.id}>
-                <img
-                  src={`img/thumbs/${s.id}.jpeg`}
+                <PlayerImage
+                  id={s.id}
+                  equipoId={team.id}
                   alt={`Carta de ${s.nombre}`}
-                  className="w-full rounded-lg"
-                  loading="lazy"
+                  className="aspect-[4/5] w-full rounded-lg object-cover"
                 />
                 <p className="display mt-1.5 text-center text-sm tracking-wide text-smoke">{s.nombre}</p>
                 <p className="display text-center text-xs tracking-widest text-primary">{s.rol}</p>

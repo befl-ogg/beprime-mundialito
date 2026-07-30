@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import PlayerImage from './PlayerImage.jsx'
 import { teamById } from '../lib/stats.js'
 
 export default function ScorerRow({ scorer, rank }) {
@@ -17,11 +18,11 @@ export default function ScorerRow({ scorer, rank }) {
         <span className={`display w-8 shrink-0 text-center text-4xl italic leading-none ${top ? 'text-ember' : 'text-smoke/30'}`}>
           {String(rank).padStart(2, '0')}
         </span>
-        <img
-          src={`img/thumbs/${jugador.id}.jpeg`}
+        <PlayerImage
+          id={jugador.id}
+          equipoId={jugador.equipo}
           alt=""
           className="h-12 w-9 shrink-0 rounded object-cover object-top"
-          loading="lazy"
         />
         <div className="min-w-0">
           <p className="display truncate text-xl italic leading-tight">{jugador.apodo}</p>

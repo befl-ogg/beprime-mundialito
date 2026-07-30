@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SectionTitle from '../components/SectionTitle.jsx'
+import PlayerImage from '../components/PlayerImage.jsx'
 import { allPlayers } from '../lib/stats.js'
 
 const POSICIONES = ['TODOS', 'POR', 'DEF', 'MED', 'DEL']
@@ -38,11 +39,11 @@ export default function Jugadores() {
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {list.map((p) => (
           <Link key={p.id} to={`/jugadores/${p.id}`} className="group">
-            <img
-              src={`img/thumbs/${p.id}.jpeg`}
+            <PlayerImage
+              id={p.id}
+              equipoId={p.equipo}
               alt={`Carta de ${p.apodo}, ${p.posicion} media ${p.media}`}
-              className="w-full rounded-lg transition-transform group-hover:scale-[1.03]"
-              loading="lazy"
+              className="aspect-[4/5] w-full rounded-lg object-cover transition-transform group-hover:scale-[1.03]"
             />
           </Link>
         ))}

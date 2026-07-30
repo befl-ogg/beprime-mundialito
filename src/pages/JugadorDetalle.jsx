@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import PlayerImage from '../components/PlayerImage.jsx'
 import { playerById, teamById, scorers } from '../lib/stats.js'
 
 const STAT_LABELS = { rit: 'Ritmo', tir: 'Tiro', pas: 'Pase', reg: 'Regate', def: 'Defensa', fis: 'Físico' }
@@ -38,10 +39,12 @@ export default function JugadorDetalle() {
   return (
     <div className="grid gap-8 md:grid-cols-[minmax(0,360px)_1fr]">
       <div className="notch-corner mx-auto w-full max-w-[360px] overflow-hidden ember-glow-tr">
-        <img
-          src={`img/cards/${p.id}.jpeg`}
+        <PlayerImage
+          id={p.id}
+          equipoId={p.equipo}
+          variant="card"
           alt={`Carta de ${p.apodo}`}
-          className="w-full"
+          className="aspect-[4/5] w-full object-cover"
         />
       </div>
 

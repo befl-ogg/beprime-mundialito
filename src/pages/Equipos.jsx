@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { MapPin } from 'lucide-react'
 import SectionTitle from '../components/SectionTitle.jsx'
 import TeamCrest from '../components/TeamCrest.jsx'
+import PlayerImage from '../components/PlayerImage.jsx'
 import { allTeams, playersOfTeam, standings } from '../lib/stats.js'
 import liga from '../data/liga.json'
 
@@ -42,12 +43,12 @@ export default function Equipos() {
               </div>
               <div className="flex -space-x-2">
                 {roster.slice(0, 8).map((p) => (
-                  <img
+                  <PlayerImage
                     key={p.id}
-                    src={`img/thumbs/${p.id}.jpeg`}
+                    id={p.id}
+                    equipoId={p.equipo}
                     alt={p.apodo}
                     className="h-16 w-11 rounded border border-line2 object-cover object-top"
-                    loading="lazy"
                   />
                 ))}
               </div>
