@@ -29,7 +29,10 @@ export default function MatchRow({ match, showGoles = false }) {
         ) : (
           <div className="flex flex-col items-center px-2">
             <span className="display text-lg text-ember">VS</span>
-            <span className="mt-0.5 text-[10px] uppercase text-smoke">{formatFecha(match.fecha)} · {match.hora}</span>
+            <span className="mt-0.5 text-[10px] uppercase text-smoke">
+              {formatFecha(match.fecha)}
+              {match.hora && match.hora !== 'TBD' ? ` · ${match.hora}` : ''}
+            </span>
           </div>
         )}
         <Side team={visitante} />

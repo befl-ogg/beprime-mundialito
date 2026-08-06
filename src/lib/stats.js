@@ -68,6 +68,7 @@ export const matchesByJornada = () => {
 }
 
 export function formatFecha(iso) {
+  if (!iso || iso === 'TBD') return 'Por definir'
   const [y, mo, d] = iso.split('-').map(Number)
   return new Date(y, mo - 1, d).toLocaleDateString('es-MX', {
     weekday: 'short', day: 'numeric', month: 'short',
