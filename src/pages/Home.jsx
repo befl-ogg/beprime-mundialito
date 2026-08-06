@@ -19,14 +19,14 @@ export default function Home() {
   return (
     <div className="space-y-10">
       <section>
-        <SectionTitle action={<VerTodo to="/partidos" />}>Próxima jornada</SectionTitle>
+        <SectionTitle action={<VerTodo to="/partidos" />}>Final</SectionTitle>
         {proximos.length > 0 ? (
           <div className="space-y-3">
             {proximos.map((m) => <MatchRow key={m.id} match={m} />)}
           </div>
         ) : (
           <p className="notch-sm border border-line2 bg-panel2 px-4 py-6 text-center text-smoke">
-            No hay partidos pendientes. Agrega la siguiente fase en <code>matches.json</code>.
+            Los partidos de la final estan pendientes por definir.
           </p>
         )}
       </section>
