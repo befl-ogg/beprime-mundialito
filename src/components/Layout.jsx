@@ -72,7 +72,7 @@ export default function Layout() {
             </a>
           </p>
           <p className="display mt-2 text-xs tracking-widest text-smoke">
-            Update: Julio 2026 <span className="mx-1 text-line2">·</span> V 1.0
+            Update: Julio 2026 <span className="mx-1 text-line2">·</span> V 1.2
           </p>
         </div>
       </footer>
